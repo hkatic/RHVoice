@@ -36,6 +36,14 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 final class DirectBoot {
+    // TEST BUILD ONLY (branch android-direct-boot-failure): when true, the Direct Boot
+    // storage migration is forced to fail at runtime and never completes. No user data
+    // is read, moved or deleted; the background migration task throws an uncaught
+    // IllegalStateException instead, crashing the process so testers can capture the
+    // resulting exception and crash logs. See DIRECT_BOOT_FAILURE_TESTCASE.md in the
+    // repository root. MUST be false (or the whole forced-failure code removed) in any
+    // production build.
+    static final boolean FORCE_MIGRATION_FAILURE = true;
     private static final String TAG = "RHVoice.DirectBoot";
     private static final String[] BACKGROUND_PRIVATE_DIRS = {"data"};
     private static final String PACKAGE_DIR = "packages";
@@ -114,8 +122,10 @@ final class DirectBoot {
         SharedPreferences state = getMigrationState(directContext);
         boolean startMigration = false;
         synchronized (DirectBoot.class) {
-            migrateSharedPreferences(appContext, directContext, state);
-            migratePrivateDir(appContext, directContext, state, PACKAGE_DIR);
+            if (!FORCE_MIGRATION_FAILURE) {
+                migrateSharedPreferences(appContext, directContext, state);
+                migratePrivateDir(appContext, directContext, state, PACKAGE_DIR);
+            }
             if (onComplete != null)
                 migrationCallbacks.add(onComplete);
             if (!migrationInProgress) {
@@ -125,6 +135,20 @@ final class DirectBoot {
         }
         if (!startMigration)
             return;
+        if (FORCE_MIGRATION_FAILURE) {
+            // TEST BUILD ONLY: simulate an unrecoverable failure of the migration to
+            // device protected storage. The synchronous steps above were skipped, no
+            // migration markers are ever persisted, finishMigration() is never called
+            // (so isMigrationInProgress() stays true and queued callbacks never run),
+            // and the exception below is intentionally left uncaught: it terminates
+            // the process through Android's default uncaught exception handler,
+            // producing a FATAL EXCEPTION entry in logcat.
+            Log.e(TAG, "TEST BUILD: forcing Direct Boot migration failure; the migration will never complete and the process will now crash");
+            migrationExecutor.execute(() -> {
+                throw new IllegalStateException("RHVoice TEST: forced Direct Boot migration failure (simulated device protected storage error); this test build never completes the migration");
+            });
+            return;
+        }
         migrationExecutor.execute(() -> {
             try {
                 Config.syncToDirectBootStorage(appContext);
