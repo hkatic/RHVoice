@@ -90,7 +90,8 @@ xcodebuild -project RHVoice.xcodeproj -scheme RHVoice -configuration Debug -deri
 ```
 
 The unit tests cover the package index, dependency rules, archive extraction (including the
-path-traversal guard), locale mapping and SSML normalization. Two integration tests download
+path-traversal guard), locale mapping, SSML normalization, and audio queue continuity,
+timeouts and cancellation. Two integration tests download
 a small voice and two demo clips from the live server and are skipped when it is unreachable.
 
 ## Distribution

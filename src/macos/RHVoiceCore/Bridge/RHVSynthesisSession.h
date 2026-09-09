@@ -17,6 +17,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// For offline speech rendering: wait for a full buffer, end of stream, or cancellation.
+/// Do not use on a real-time audio device callback.
+static const uint32_t RHVRenderWaitForever = UINT32_MAX;
+
 typedef NS_ENUM(NSInteger, RHVRenderStatus) {
     RHVRenderStatusRendering,  // more audio may follow
     RHVRenderStatusComplete,   // synthesis finished and every frame was delivered
@@ -49,9 +53,11 @@ NS_SWIFT_SENDABLE
 /// Stops the engine at the next chunk boundary and makes renderInto report cancellation.
 - (void)cancel;
 
-/// Copies up to frameCount frames into buffer. If no frames are available yet and synthesis is
-/// still running, waits up to maxWaitMilliseconds. The number of frames actually written is
-/// stored in framesWritten; the caller zero-fills the remainder.
+/// Fills buffer across synthesis chunks, waiting up to maxWaitMilliseconds for the whole read.
+/// Pass RHVRenderWaitForever for offline rendering, or 0 to consume only available frames.
+/// End of stream or cancellation can return fewer frames; a finite wait can also time out.
+/// The number written is stored in framesWritten; the caller zero-fills the remainder.
+/// A zero-frame read only reports the state and never waits.
 - (RHVRenderStatus)renderInto:(float *)buffer
                    frameCount:(uint32_t)frameCount
           maxWaitMilliseconds:(uint32_t)maxWaitMilliseconds

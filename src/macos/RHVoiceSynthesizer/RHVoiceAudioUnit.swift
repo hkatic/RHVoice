@@ -15,7 +15,6 @@ public final class RHVoiceAudioUnit: AVSpeechSynthesisProviderAudioUnit {
 
     private struct RenderState: Sendable {
         var session: RHVSynthesisSession?
-        var renderedFrames: Bool = false
     }
 
     /// Relays markers from the synthesis thread to the host without capturing the audio unit
@@ -120,7 +119,6 @@ public final class RHVoiceAudioUnit: AVSpeechSynthesisProviderAudioUnit {
             let session = try engine.startSession(withSSML: speechRequest.ssmlRepresentation, voiceName: voice.name, options: options, markerHandler: handler)
             renderState.withLock { state in
                 state.session = session
-                state.renderedFrames = false
             }
         } catch {
             RHVLog.synthesizer.error("Cannot start synthesis: \(error.localizedDescription, privacy: .public)")
@@ -151,20 +149,18 @@ public final class RHVoiceAudioUnit: AVSpeechSynthesisProviderAudioUnit {
                 return kAudioUnitErr_InvalidParameter
             }
             let frames = Int(frameCount)
-            let (session, firstBuffer) = renderState.withLock { state in
-                (state.session, !state.renderedFrames)
-            }
+            let session = renderState.withLock { $0.session }
             var written: UInt32 = 0
             var status: RHVRenderStatus = .complete
             if let session {
-                // Wait briefly for the engine so the stream does not start with silence, but
-                // never stall the host: later buffers wait at most a couple of render periods.
-                status = session.render(into: output, frameCount: frameCount, maxWaitMilliseconds: firstBuffer ? 250 : 40, framesWritten: &written)
-                let producedFrames = written > 0
+                // The speech host pulls offline and may request audio faster than it is
+                // synthesized. Fill the whole buffer across engine chunks; padding a short
+                // read or a synthesis timeout with silence inserts audible gaps. Cancellation
+                // aborts the queue and wakes this wait without holding renderState's lock.
+                status = session.render(into: output, frameCount: frameCount, maxWaitMilliseconds: RHVRenderWaitForever, framesWritten: &written)
                 let finished = status != .rendering
                 renderState.withLock { state in
                     guard state.session === session else { return }
-                    if producedFrames { state.renderedFrames = true }
                     if finished { state.session = nil }
                 }
             }
@@ -174,7 +170,7 @@ public final class RHVoiceAudioUnit: AVSpeechSynthesisProviderAudioUnit {
             buffers[0].mDataByteSize = UInt32(frames * MemoryLayout<Float>.size)
             buffers[0].mNumberChannels = 1
             if status != .rendering {
-                actionFlags.pointee = .offlineUnitRenderAction_Complete
+                actionFlags.pointee.insert(.offlineUnitRenderAction_Complete)
             }
             return noErr
         }

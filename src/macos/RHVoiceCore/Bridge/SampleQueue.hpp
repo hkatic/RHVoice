@@ -29,8 +29,8 @@ namespace rhvoice_macos
   //
   // Producer: the synthesis thread (SpeechSink::play_speech), which blocks while the queue
   // is full so that long utterances never accumulate unbounded audio in memory.
-  // Consumer: the audio unit render call, which may wait briefly for the first samples of
-  // a request so the audio stream does not start with silence.
+  // Consumer: the speech provider's offline render call, which waits for a full buffer,
+  // or a timed/non-waiting reader such as the in-app player.
   class SampleQueue
   {
   public:
@@ -87,28 +87,48 @@ namespace rhvoice_macos
       not_full.notify_all();
     }
 
-    // Copies up to max_count samples into out and stores the number copied in count_out.
-    // When nothing is available and the stream is still open, waits up to max_wait first.
+    // Fills out across producer chunks, stopping at end of stream, cancellation, or the
+    // deadline. max_wait is a budget for the entire read, not for each chunk. A zero wait
+    // only consumes available samples; milliseconds::max() waits until the buffer is full
+    // or the stream ends. Consume as we go so reads larger than the queue cannot deadlock.
+    // A zero-count read just reports the state and never waits.
     State pop(float* out,std::size_t max_count,std::chrono::milliseconds max_wait,std::size_t& count_out)
     {
+      const bool wait_forever=(max_wait==std::chrono::milliseconds::max());
+      const auto deadline=wait_forever?std::chrono::steady_clock::time_point::max():
+        std::chrono::steady_clock::now()+max_wait;
       std::unique_lock<std::mutex> lock(mutex);
-      if((size==0)&&!finished&&!aborted&&(max_wait.count()>0))
-        not_empty.wait_for(lock,max_wait,[&]{return (size>0)||finished||aborted;});
+      count_out=0;
+      while((count_out<max_count)&&!aborted)
+        {
+          if(size==0)
+            {
+              if(finished)
+                break;
+              const auto ready=[&]{return (size>0)||finished||aborted;};
+              if(wait_forever)
+                not_empty.wait(lock,ready);
+              else if((max_wait.count()<=0)||!not_empty.wait_until(lock,deadline,ready))
+                break;
+              if(aborted)
+                break;
+            }
+          std::size_t n=std::min(max_count-count_out,size);
+          for(std::size_t i=0;i<n;++i)
+            {
+              out[count_out+i]=buffer[head];
+              head=(head+1)%capacity;
+            }
+          size-=n;
+          count_out+=n;
+          if(n>0)
+            not_full.notify_one();
+        }
       if(aborted)
         {
           count_out=0;
           return State::aborted;
         }
-      std::size_t n=std::min(max_count,size);
-      for(std::size_t i=0;i<n;++i)
-        {
-          out[i]=buffer[head];
-          head=(head+1)%capacity;
-        }
-      size-=n;
-      count_out=n;
-      if(n>0)
-        not_full.notify_one();
       if(finished&&(size==0))
         return State::complete;
       return State::rendering;

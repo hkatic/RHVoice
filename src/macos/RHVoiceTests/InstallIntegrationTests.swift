@@ -50,7 +50,10 @@ final class InstallIntegrationTests: XCTestCase {
         var status = RHVRenderStatus.rendering
         while status == .rendering {
             var written: UInt32 = 0
-            status = session.render(into: &buffer, frameCount: 4096, maxWaitMilliseconds: 2000, framesWritten: &written)
+            status = session.render(into: &buffer, frameCount: 4096, maxWaitMilliseconds: RHVRenderWaitForever, framesWritten: &written)
+            if status == .rendering {
+                XCTAssertEqual(written, 4096, "ongoing speech must not be padded with silence between engine chunks")
+            }
             frames += Int(written)
         }
         XCTAssertEqual(status, .complete)

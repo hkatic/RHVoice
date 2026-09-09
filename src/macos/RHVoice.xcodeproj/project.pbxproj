@@ -53,6 +53,7 @@
 		5BFCA9E62FB5CF2CCE484D11 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D609AF39DC69F591AB266ED /* AudioToolbox.framework */; };
 		6141CE2DC66294261E840863 /* georgian.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F19C90D398FCA0414EA0CAEA /* georgian.cpp */; };
 		6222858254DFDD1D932355DA /* HTS_audio.c in Sources */ = {isa = PBXBuildFile; fileRef = 90D3C570028A6929D8FE1587 /* HTS_audio.c */; };
+		637AF5E5ED17107082B97AEF /* SampleQueueTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6B99A2744C7D655A9CACB135 /* SampleQueueTests.mm */; };
 		63D6292C5CF6E3C1FCFD4A0F /* LocaleMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6C6F2386498399C013C903 /* LocaleMapping.swift */; };
 		6A4EC1F9198B1EF7A4436D71 /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DAAE202034FF63B6A16AD42 /* test.cpp */; };
 		6ADCAFA5F113A8E73192B8AC /* DataLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238A3BF44D1A30DB21855AD9 /* DataLayout.swift */; };
@@ -274,6 +275,7 @@
 		68771A93745714335024CDDF /* phoneme_set.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = phoneme_set.cpp; sourceTree = "<group>"; };
 		6A4524B1C4155CDC11B3DC60 /* unit_db.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = unit_db.cpp; sourceTree = "<group>"; };
 		6B4F9903A7D4D9FB32F6B225 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		6B99A2744C7D655A9CACB135 /* SampleQueueTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SampleQueueTests.mm; sourceTree = "<group>"; };
 		6BDC60BAAE39218B9AE1493C /* lts.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lts.cpp; sourceTree = "<group>"; };
 		6BE2E8D77116DFDE92E3DD64 /* params.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = params.cpp; sourceTree = "<group>"; };
 		6FECB6A74E968DBD518796E0 /* generate-voice-metadata.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = "generate-voice-metadata.py"; sourceTree = "<group>"; };
@@ -664,6 +666,7 @@
 				35C25EEABC859DFEF50A679C /* InstallIntegrationTests.swift */,
 				E022375BB8841D73A85E9CDC /* PackageExtractorTests.swift */,
 				7E2F701B12242B6953EFFE87 /* PackageIndexTests.swift */,
+				6B99A2744C7D655A9CACB135 /* SampleQueueTests.mm */,
 				3199BFBF10CF4D577A678681 /* SSMLNormalizerTests.swift */,
 			);
 			path = RHVoiceTests;
@@ -1140,6 +1143,7 @@
 				A2395B120833247A8DE4CFFA /* PackageExtractorTests.swift in Sources */,
 				37B04ABDD4F7D37B3BB64766 /* PackageIndexTests.swift in Sources */,
 				04651C118513AD278969376B /* SSMLNormalizerTests.swift in Sources */,
+				637AF5E5ED17107082B97AEF /* SampleQueueTests.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

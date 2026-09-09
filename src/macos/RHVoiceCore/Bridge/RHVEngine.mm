@@ -155,7 +155,9 @@ namespace
                 framesWritten:(uint32_t *)framesWritten
 {
   std::size_t written = 0;
-  rhvoice_macos::SampleQueue::State state = _state->queue.pop(buffer, frameCount, std::chrono::milliseconds(maxWaitMilliseconds), written);
+  const auto wait = maxWaitMilliseconds == RHVRenderWaitForever ? std::chrono::milliseconds::max() :
+    std::chrono::milliseconds(maxWaitMilliseconds);
+  rhvoice_macos::SampleQueue::State state = _state->queue.pop(buffer, frameCount, wait, written);
   if (framesWritten) {
     *framesWritten = static_cast<uint32_t>(written);
   }
