@@ -23,6 +23,7 @@ final class SamplePlayer: ObservableObject {
     private var session: RHVSynthesisSession?
     private var demoTask: Task<Void, Never>?
     private var completionTimer: Timer?
+    private var playbackGeneration: UInt64 = 0
 
     var playingVoiceId: String? {
         switch state {
@@ -35,6 +36,7 @@ final class SamplePlayer: ObservableObject {
 
     func play(voice: InstalledVoice, text: String, holder: EngineHolder) {
         stop()
+        lastError = nil
         state = .loading(voiceId: voice.id)
         do {
             let engine = try holder.engine()
@@ -90,6 +92,8 @@ final class SamplePlayer: ObservableObject {
 
     func playDemo(voiceId: String, url: URL, cacheDirectory: URL) {
         stop()
+        lastError = nil
+        let generation = playbackGeneration
         state = .loading(voiceId: voiceId)
         demoTask = Task { [weak self] in
             do {
@@ -101,6 +105,7 @@ final class SamplePlayer: ObservableObject {
             } catch is CancellationError {
             } catch {
                 await MainActor.run {
+                    guard self?.playbackGeneration == generation else { return }
                     self?.lastError = error.localizedDescription
                     self?.stop()
                 }
@@ -113,6 +118,7 @@ final class SamplePlayer: ObservableObject {
         audioEngine.attach(node)
         audioEngine.connect(node, to: audioEngine.mainMixerNode, format: buffer.format)
         playerNode = node
+        let generation = playbackGeneration
         do {
             try audioEngine.start()
         } catch {
@@ -122,7 +128,7 @@ final class SamplePlayer: ObservableObject {
         }
         node.scheduleBuffer(buffer, at: nil, options: []) { [weak self] in
             Task { @MainActor [weak self] in
-                if self?.playingVoiceId == voiceId { self?.stop() }
+                if self?.playbackGeneration == generation { self?.stop() }
             }
         }
         node.play()
@@ -132,12 +138,16 @@ final class SamplePlayer: ObservableObject {
     // MARK: Stop
 
     func stop() {
+        playbackGeneration &+= 1
         demoTask?.cancel()
         demoTask = nil
         completionTimer?.invalidate()
         completionTimer = nil
         session?.cancel()
         session = nil
+        if audioEngine.isRunning {
+            audioEngine.stop()
+        }
         if let node = playerNode {
             node.stop()
             audioEngine.detach(node)
@@ -146,9 +156,6 @@ final class SamplePlayer: ObservableObject {
         if let node = sourceNode {
             audioEngine.detach(node)
             sourceNode = nil
-        }
-        if audioEngine.isRunning {
-            audioEngine.stop()
         }
         state = .idle
     }

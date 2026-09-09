@@ -171,6 +171,30 @@ targets:
         GENERATE_INFOPLIST_FILE: YES
         PRODUCT_BUNDLE_IDENTIFIER: $(RHVOICE_BUNDLE_PREFIX).RHVoiceTests
 
+  # Test the actual provider and bridge without loading an installed system extension.
+  RHVoiceSynthesizerTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - path: RHVoiceSynthesizerTests
+      - path: RHVoiceSynthesizer
+        excludes:
+          - Info.plist
+          - "*.h"
+          - AudioUnitFactory.swift
+      - path: Shared
+    dependencies:
+      - target: RHVoiceCore
+      - sdk: AVFAudio.framework
+      - sdk: AudioToolbox.framework
+    settings:
+      base:
+        SWIFT_OBJC_BRIDGING_HEADER: $(SRCROOT)/RHVoiceSynthesizer/RHVoiceSynthesizer-Bridging-Header.h
+        HEADER_SEARCH_PATHS: $(inherited) $(SRCROOT)/RHVoiceCore/Bridge
+        OTHER_LDFLAGS: $(inherited) -ObjC -lc++
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: $(RHVOICE_BUNDLE_PREFIX).RHVoiceSynthesizerTests
+
   # Upstream RHVoice-test (src/test/test.cpp) with the file audio backend: writes WAV files.
   # Development/CI smoke test only.
   RHVoiceCLI:
@@ -193,12 +217,14 @@ schemes:
       targets:
         RHVoice: all
         RHVoiceTests: [test]
+        RHVoiceSynthesizerTests: [test]
     run:
       config: Debug
     test:
       config: Debug
       targets:
         - RHVoiceTests
+        - RHVoiceSynthesizerTests
     archive:
       config: Release
   RHVoiceCLI:

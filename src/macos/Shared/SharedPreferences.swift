@@ -65,7 +65,7 @@ enum SharedPreferences {
 
     static var markersEnabled: Bool {
         get { defaults.object(forKey: Key.markersEnabled) == nil ? true : defaults.bool(forKey: Key.markersEnabled) }
-        set { defaults.set(newValue, forKey: Key.markersEnabled); bumpGeneration() }
+        set { defaults.set(newValue, forKey: Key.markersEnabled) }
     }
 
     static var generation: Int {

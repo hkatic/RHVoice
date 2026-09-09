@@ -94,6 +94,12 @@ path-traversal guard), locale mapping, SSML normalization, and audio queue conti
 timeouts and cancellation. Two integration tests download
 a small voice and two demo clips from the live server and are skipped when it is unreachable.
 
+The `RHVoiceSynthesizerTests` target exercises the provider directly, without registering a
+system extension. It checks host buffer ownership and capacity, format validation, concurrent
+requests and cancellation, session cleanup, Unicode marker ranges, and catalog/configuration
+cache invalidation. Its synthesis tests use the checked-out Alan voice and English language
+submodules and are skipped when those fixtures are unavailable.
+
 ## Distribution
 
 The app cannot be sold through the Mac App Store (the engine is LGPL and several voices are

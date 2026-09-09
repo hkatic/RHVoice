@@ -50,6 +50,7 @@ final class AppModel: ObservableObject {
     let samplePlayer = SamplePlayer()
     private let repository: IndexRepository?
     private var tasks: [String: Task<Void, Never>] = [:]
+    private var installIDs: [String: UUID] = [:]
     private var watchers: [DispatchSourceFileSystemObject] = []
     private var registrationPoll: Task<Void, Never>?
 
@@ -197,19 +198,24 @@ final class AppModel: ObservableObject {
             return
         }
         voiceStates[voice.id] = .downloading(packName: plan[0].name, fraction: nil)
+        let installID = UUID()
+        installIDs[voice.id] = installID
         tasks[voice.id] = Task { [weak self] in
-            defer { self?.tasks[voice.id] = nil }
+            defer {
+                self?.tasks[voice.id] = nil
+                self?.installIDs[voice.id] = nil
+            }
             do {
                 for pack in plan {
                     try Task.checkCancellation()
-                    try await self?.installPack(pack, layout: layout, voiceId: voice.id)
+                    try await self?.installPack(pack, layout: layout, voiceId: voice.id, installID: installID)
                 }
                 self?.voiceStates[voice.id] = .installed
                 self?.engineHolder.invalidate()
                 self?.refreshInstalled()
                 SpeechRegistration.notifyVoicesChanged()
                 self?.pollRegistration()
-            } catch is CancellationError {
+            } catch where Task.isCancelled || error is CancellationError {
                 self?.voiceStates[voice.id] = nil
                 self?.refreshInstalled()
             } catch {
@@ -219,25 +225,37 @@ final class AppModel: ObservableObject {
         }
     }
 
-    private func installPack(_ pack: DependencyResolver.Pack, layout: DataLayout, voiceId: String) async throws {
+    private func installPack(_ pack: DependencyResolver.Pack, layout: DataLayout, voiceId: String, installID: UUID) async throws {
         guard let url = URL(string: pack.dataUrl) else { throw URLError(.badURL) }
-        let archive = layout.tmp.appendingPathComponent("\(pack.kind == .voice ? "voice" : "language")-\(pack.id)-\(pack.version).zip")
+        // Two voices may download the same language concurrently. Their downloads
+        // and partial files must not overwrite or remove each other's archive.
+        let archive = layout.tmp.appendingPathComponent("\(voiceId)-\(pack.kind == .voice ? "voice" : "language")-\(pack.id)-\(pack.version).zip")
+        defer { try? FileManager.default.removeItem(at: archive) }
         voiceStates[voiceId] = .downloading(packName: pack.name, fraction: nil)
         try await PackageDownloader.download(from: url, to: archive, expectedMD5: pack.descriptor.expectedMD5) { received, expected in
             let fraction = expected.map { $0 > 0 ? Double(received) / Double($0) : nil } ?? nil
             Task { @MainActor [weak self] in
-                self?.voiceStates[voiceId] = .downloading(packName: pack.name, fraction: fraction)
+                guard let self, self.installIDs[voiceId] == installID,
+                      self.tasks[voiceId]?.isCancelled == false,
+                      case .downloading(let name, _) = self.voiceStates[voiceId], name == pack.name else { return }
+                self.voiceStates[voiceId] = .downloading(packName: pack.name, fraction: fraction)
             }
         }
         voiceStates[voiceId] = .installing(packName: pack.name)
         let staging = layout.tmp.appendingPathComponent("extract-\(UUID().uuidString)", isDirectory: true)
+        defer { try? FileManager.default.removeItem(at: staging) }
         let kind = pack.kind
         let expected = pack.version
-        try await Task.detached(priority: .userInitiated) {
+        let extraction = Task.detached(priority: .userInitiated) {
             try PackageExtractor.extract(archiveURL: archive, to: staging)
             try PackageExtractor.verify(extractedPack: staging, kind: kind, expected: expected)
-        }.value
-        try? FileManager.default.removeItem(at: archive)
+        }
+        try await withTaskCancellationHandler {
+            try await extraction.value
+        } onCancel: {
+            extraction.cancel()
+        }
+        try Task.checkCancellation()
 
         let destination = pack.kind == .voice ? layout.voiceDirectory(id: pack.id) : layout.languageDirectory(id: pack.id)
         var sidecar = PackSidecar()
@@ -255,7 +273,7 @@ final class AppModel: ObservableObject {
 
     /// Moves `source` into place at `destination`, retiring any previous directory to a trash
     /// folder first (a speaking extension keeps valid file handles) and deleting it afterwards.
-    private static func replaceDirectory(at destination: URL, with source: URL, trash: URL) throws {
+    static func replaceDirectory(at destination: URL, with source: URL, trash: URL) throws {
         let fm = FileManager.default
         try fm.createDirectory(at: destination.deletingLastPathComponent(), withIntermediateDirectories: true)
         var retired: URL?
@@ -264,7 +282,15 @@ final class AppModel: ObservableObject {
             try fm.moveItem(at: destination, to: target)
             retired = target
         }
-        try fm.moveItem(at: source, to: destination)
+        do {
+            try fm.moveItem(at: source, to: destination)
+        } catch {
+            // A failed update must leave the installed voice available to VoiceOver.
+            if let retired {
+                try fm.moveItem(at: retired, to: destination)
+            }
+            throw error
+        }
         if let retired {
             DispatchQueue.global(qos: .utility).asyncAfter(deadline: .now() + 5) {
                 try? FileManager.default.removeItem(at: retired)

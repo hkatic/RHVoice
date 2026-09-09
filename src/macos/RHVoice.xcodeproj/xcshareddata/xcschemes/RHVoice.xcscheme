@@ -29,6 +29,20 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "069BE1A1D8152F9242C269D7"
+               BuildableName = "RHVoiceSynthesizerTests.xctest"
+               BlueprintName = "RHVoiceSynthesizerTests"
+               ReferencedContainer = "container:RHVoice.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "2DA6FEB2C7673672EC01C009"
                BuildableName = "RHVoiceTests.xctest"
                BlueprintName = "RHVoiceTests"
@@ -61,6 +75,17 @@
                BlueprintIdentifier = "2DA6FEB2C7673672EC01C009"
                BuildableName = "RHVoiceTests.xctest"
                BlueprintName = "RHVoiceTests"
+               ReferencedContainer = "container:RHVoice.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "069BE1A1D8152F9242C269D7"
+               BuildableName = "RHVoiceSynthesizerTests.xctest"
+               BlueprintName = "RHVoiceSynthesizerTests"
                ReferencedContainer = "container:RHVoice.xcodeproj">
             </BuildableReference>
          </TestableReference>

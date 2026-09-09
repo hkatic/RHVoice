@@ -11,7 +11,8 @@ enum MarkerMapper {
 
     static func range(utf8Offset: Int, utf8Length: Int, in text: String) -> NSRange? {
         let utf8 = text.utf8
-        guard utf8Offset >= 0, utf8Length >= 0, utf8Offset + utf8Length <= utf8.count else { return nil }
+        guard utf8Offset >= 0, utf8Length >= 0, utf8Offset <= utf8.count,
+              utf8Length <= utf8.count - utf8Offset else { return nil }
         let start = utf8.index(utf8.startIndex, offsetBy: utf8Offset)
         let end = utf8.index(start, offsetBy: utf8Length)
         guard let startIndex = start.samePosition(in: text.unicodeScalars),
@@ -22,6 +23,7 @@ enum MarkerMapper {
     }
 
     static func marker(kind: RHVMarkerKind, utf8Offset: Int, utf8Length: Int, bookmark: String?, frame: UInt64, in text: String) -> AVSpeechSynthesisMarker? {
+        guard frame <= UInt64(Int.max / bytesPerFrame) else { return nil }
         let byteOffset = Int(frame) * bytesPerFrame
         switch kind {
         case .bookmark:

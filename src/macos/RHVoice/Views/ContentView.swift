@@ -18,8 +18,11 @@ struct ContentView: View {
         .safeAreaInset(edge: .bottom) {
             StatusBar()
         }
-        .alert("Cannot access voice data", isPresented: .constant(model.setupError != nil)) {
-            Button("OK") { }
+        .alert("Cannot access voice data", isPresented: Binding(
+            get: { model.setupError != nil },
+            set: { if !$0 { model.setupError = nil } }
+        )) {
+            Button("OK") { model.setupError = nil }
         } message: {
             Text(model.setupError ?? "")
         }

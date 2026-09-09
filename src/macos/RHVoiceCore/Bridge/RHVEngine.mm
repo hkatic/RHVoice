@@ -17,6 +17,7 @@
 
 #include <atomic>
 #include <condition_variable>
+#include <cmath>
 #include <memory>
 #include <mutex>
 #include <string>
@@ -60,7 +61,9 @@ namespace
     std::string original_ssml;
     std::string ssml;
     rhvoice_macos::OffsetMap offsets;
-    rhvoice_macos::SampleQueue queue{1u << 17}; // about 5.5 s at 24 kHz
+    // About 0.68 s at 24 kHz. Offline reads can span the queue, so several
+    // seconds of speculative audio only waste work and memory on interruption.
+    rhvoice_macos::SampleQueue queue{1u << 14};
     std::atomic<bool> cancelled{false};
     std::unique_ptr<rhvoice_macos::SpeechSink> sink;
     std::unique_ptr<RHVoice::document> document;
@@ -135,6 +138,15 @@ namespace
 - (double)sampleRate
 {
   return _state->sample_rate;
+}
+
+- (void)dealloc
+{
+  // The worker owns SessionState independently. Without cancellation it can stay
+  // blocked on a full queue forever after the host releases its last session.
+  if (_state) {
+    [self cancel];
+  }
 }
 
 - (BOOL)isFinished
@@ -269,6 +281,12 @@ namespace
                                          markerHandler:(nullable RHVMarkerHandler)markerHandler
                                                  error:(NSError **)error
 {
+  if (options && (!std::isfinite(options.outputSampleRate) || options.outputSampleRate <= 0)) {
+    if (error) {
+      *error = make_error(RHVEngineErrorInvalidInput, @"Output sample rate must be finite and positive");
+    }
+    return nil;
+  }
   auto state = std::make_shared<SessionState>();
   state->engine = _engine;
   if (options) {
@@ -306,7 +324,7 @@ namespace
       std::weak_ptr<SessionState> weak_state = state;
       markers = [handler, weak_state](rhvoice_macos::MarkerKind kind, std::size_t position, std::size_t length, const std::string &name, uint64_t frame) {
         auto strong = weak_state.lock();
-        if (!strong) {
+        if (!strong || strong->cancelled) {
           return;
         }
         std::size_t start = strong->offsets.to_original(position);
@@ -317,8 +335,10 @@ namespace
           case rhvoice_macos::MarkerKind::sentence: objc_kind = RHVMarkerKindSentence; break;
           case rhvoice_macos::MarkerKind::bookmark: objc_kind = RHVMarkerKindBookmark; break;
         }
-        NSString *bookmark = name.empty() ? nil : [NSString stringWithUTF8String:name.c_str()];
-        handler(objc_kind, start, end > start ? end - start : 0, bookmark, frame);
+        @autoreleasepool {
+          NSString *bookmark = name.empty() ? nil : [NSString stringWithUTF8String:name.c_str()];
+          handler(objc_kind, start, end > start ? end - start : 0, bookmark, frame);
+        }
       };
     }
     state->sink.reset(new rhvoice_macos::SpeechSink(state->queue, state->cancelled, state->sample_rate, markers));
@@ -332,19 +352,27 @@ namespace
   }
 
   std::thread([state] {
-    try {
-      state->document->synthesize();
-    } catch (const std::exception &e) {
-      os_log_error(bridge_log(), "Synthesis failed: %{public}s", e.what());
-    } catch (...) {
-      os_log_error(bridge_log(), "Synthesis failed with an unknown exception");
+    @autoreleasepool {
+      try {
+        if (!state->cancelled) {
+          state->document->synthesize();
+        }
+      } catch (const std::exception &e) {
+        if (!state->cancelled) {
+          os_log_error(bridge_log(), "Synthesis failed: %{public}s", e.what());
+        }
+      } catch (...) {
+        os_log_error(bridge_log(), "Synthesis failed with an unknown exception");
+      }
+      try {
+        if (!state->cancelled) {
+          state->sink->flush();
+        }
+      } catch (...) {
+      }
+      state->queue.finish();
+      state->mark_finished();
     }
-    try {
-      state->sink->flush();
-    } catch (...) {
-    }
-    state->queue.finish();
-    state->mark_finished();
   }).detach();
 
   return [[RHVSynthesisSession alloc] initWithState:state];

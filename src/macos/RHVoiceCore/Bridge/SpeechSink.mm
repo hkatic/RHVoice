@@ -39,6 +39,9 @@ namespace rhvoice_macos
     // result to out. Returns false on a converter error.
     bool convert(const float* samples,std::size_t count,bool end,std::vector<float>& out)
     {
+      // Converter internals create autoreleased objects for every chunk. Drain
+      // them here rather than retaining them for a potentially long utterance.
+      @autoreleasepool {
       AVAudioPCMBuffer* input=nil;
       if(count>0)
         {
@@ -66,6 +69,7 @@ namespace rhvoice_macos
       const float* data=output.floatChannelData[0];
       out.insert(out.end(),data,data+output.frameLength);
       return true;
+      }
     }
 
   private:
@@ -96,6 +100,8 @@ namespace rhvoice_macos
 
   bool SpeechSink::set_sample_rate(int sample_rate)
   {
+    if(cancelled)
+      return false;
     input_rate=sample_rate;
     if(static_cast<double>(sample_rate)!=output_rate)
       resampler.reset(new Resampler(sample_rate,output_rate));
@@ -142,6 +148,8 @@ namespace rhvoice_macos
 
   bool SpeechSink::marker(MarkerKind kind,std::size_t position,std::size_t length,const std::string& name)
   {
+    if(cancelled)
+      return false;
     if(markers)
       markers(kind,position,length,name,produced);
     return !cancelled;

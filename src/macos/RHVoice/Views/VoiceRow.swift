@@ -118,17 +118,21 @@ struct VoiceRow: View {
                 }
             }
             .disabled(!model.canPlaySample(voice) || state.isBusy)
+            .accessibilityLabel(player.playingVoiceId == voice.id ? "Stop \(voice.name)" : "Play \(voice.name)")
             .help(installed == nil ? "Play the demo clip" : "Speak a sample with this voice")
 
             switch state {
             case .notInstalled:
                 Button("Install") { model.install(voice, in: language) }
-                    .keyboardShortcut(.defaultAction)
+                    .accessibilityLabel("Install \(voice.name)")
             case .installed:
                 Button("Uninstall") { model.requestRemoval(of: voice, in: language) }
+                    .accessibilityLabel("Uninstall \(voice.name)")
             case .updateAvailable:
                 Button("Update") { model.install(voice, in: language) }
+                    .accessibilityLabel("Update \(voice.name)")
                 Button("Uninstall") { model.requestRemoval(of: voice, in: language) }
+                    .accessibilityLabel("Uninstall \(voice.name)")
             case .downloading(let packName, let fraction):
                 ProgressView(value: fraction ?? 0, total: 1) {
                     Text("Downloading \(packName)…")
@@ -138,11 +142,13 @@ struct VoiceRow: View {
                 .accessibilityLabel("Downloading \(packName)")
                 .accessibilityValue(fraction.map { "\(Int($0 * 100)) percent" } ?? "in progress")
                 Button("Cancel") { model.cancel(voice) }
+                    .accessibilityLabel("Cancel installation of \(voice.name)")
             case .installing(let packName):
                 ProgressView()
                     .controlSize(.small)
                 Text("Installing \(packName)…")
                 Button("Cancel") { model.cancel(voice) }
+                    .accessibilityLabel("Cancel installation of \(voice.name)")
             case .removing:
                 ProgressView()
                     .controlSize(.small)
@@ -152,7 +158,9 @@ struct VoiceRow: View {
                     .foregroundStyle(.red)
                     .lineLimit(2)
                 Button("Retry") { model.clearFailure(voice); model.install(voice, in: language) }
+                    .accessibilityLabel("Retry installation of \(voice.name)")
                 Button("Dismiss") { model.clearFailure(voice) }
+                    .accessibilityLabel("Dismiss error for \(voice.name)")
             }
             Spacer()
         }

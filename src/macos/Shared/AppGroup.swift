@@ -24,7 +24,8 @@ enum AppGroup {
     }
 
     /// Preferences shared between the app and the extension.
-    static var sharedDefaults: UserDefaults {
+    // UserDefaults synchronizes its own access, but is not annotated Sendable.
+    nonisolated(unsafe) static let sharedDefaults: UserDefaults = {
         UserDefaults(suiteName: identifier) ?? .standard
-    }
+    }()
 }
