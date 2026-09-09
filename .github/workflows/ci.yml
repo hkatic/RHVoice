@@ -92,3 +92,42 @@ jobs:
         with:
           name: packages
           path: build/windows/packages
+
+  macosBuild:
+    name: macOS build
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          submodules: 'true'
+
+      - name: Install XcodeGen
+        run: brew install xcodegen
+
+      - name: Check generated files are current
+        working-directory: ./src/macos
+        run: |
+          xcodegen generate
+          git diff --exit-code RHVoice.xcodeproj
+          python3 scripts/generate-voice-metadata.py --check
+          python3 scripts/import-android-strings.py --check
+
+      - name: Build command-line tool
+        working-directory: ./src/macos
+        run: xcodebuild -project RHVoice.xcodeproj -scheme RHVoiceCLI -configuration Release -derivedDataPath build/DerivedData CODE_SIGNING_ALLOWED=NO build -quiet
+
+      - name: Synthesize a test sentence
+        working-directory: ./src/macos
+        run: |
+          CLI=build/DerivedData/Build/Products/Release/rhvoice-cli
+          lipo -info "$CLI"
+          echo "Hello from the RHVoice continuous integration build." | RHVOICE_DATA_PATH=../../data RHVOICE_CONFIG_PATH=../../config "$CLI" -p alan -q max -o alan.wav
+          afinfo alan.wav | grep -E "Data format|estimated duration"
+          test "$(stat -f %z alan.wav)" -gt 100000
+
+      - name: Build app and run tests
+        working-directory: ./src/macos
+        run: xcodebuild -project RHVoice.xcodeproj -scheme RHVoice -configuration Debug -derivedDataPath build/DerivedData CODE_SIGNING_ALLOWED=NO CODE_SIGN_IDENTITY="" test -quiet
+

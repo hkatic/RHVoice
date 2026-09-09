@@ -1,0 +1,22 @@
+// RHVoiceCore: the engine (src/core + src/hts_engine) compiled as a static library, plus the ObjC++ bridge.
+#include "CoreHeaders.xcconfig"
+
+PRODUCT_NAME = RHVoiceCore
+SKIP_INSTALL = YES
+
+// The engine must be compiled as C++14: it still uses std::unary_function/std::not1,
+// which libc++ removes from C++17 onward.
+CLANG_CXX_LANGUAGE_STANDARD = c++14
+CLANG_CXX_LIBRARY = libc++
+GCC_C_LANGUAGE_STANDARD = c11
+GCC_ENABLE_CPP_EXCEPTIONS = YES
+GCC_ENABLE_CPP_RTTI = YES
+
+// Same define set as the Android build (jni/Android.mk) minus HTS_EMBEDDED (which lowers
+// vocoder quality) and DEFAULT_PUNCTUATION_MODE (VoiceOver verbalizes punctuation itself).
+// ENABLE_SONIC/ENABLE_PKG/DATA_PATH/CONFIG_PATH replace the two generated config.h files;
+// see RHVoiceCore/include/config.h.
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) PACKAGE=\"RHVoice\" VERSION=\"$(RHVOICE_VERSION)\" DATA_PATH=\"\" CONFIG_PATH=\"\" ENABLE_SONIC=0 ENABLE_PKG=0 MAX_RATE=3 MAX_VOLUME=MAX_MAX_VOLUME
+
+// The engine sources are upstream code; keep their warnings out of the build log.
+GCC_WARN_INHIBIT_ALL_WARNINGS = YES

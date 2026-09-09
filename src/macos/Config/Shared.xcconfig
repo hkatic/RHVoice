@@ -1,0 +1,41 @@
+// Settings common to all macOS targets. Included by the project for every configuration.
+#include "Version.xcconfig"
+
+// Paths
+RHVOICE_ROOT = $(SRCROOT)/../..
+RHVOICE_SRC = $(SRCROOT)/..
+
+// Platform
+MACOSX_DEPLOYMENT_TARGET = 13.0
+SDKROOT = macosx
+ARCHS = $(ARCHS_STANDARD)
+ONLY_ACTIVE_ARCH[config=Debug] = YES
+ONLY_ACTIVE_ARCH[config=Release] = NO
+
+// Swift
+SWIFT_VERSION = 6.0
+SWIFT_STRICT_CONCURRENCY = complete
+
+// Identity (override in Local.xcconfig)
+RHVOICE_BUNDLE_PREFIX = org.rhvoice
+APP_GROUP_ID = org.rhvoice.RHVoice
+CODE_SIGN_IDENTITY = -
+CODE_SIGN_STYLE = Manual
+DEVELOPMENT_TEAM =
+
+// General hygiene
+CLANG_ENABLE_MODULES = YES
+CLANG_ENABLE_OBJC_ARC = YES
+ENABLE_HARDENED_RUNTIME = YES
+DEAD_CODE_STRIPPING = YES
+GCC_OPTIMIZATION_LEVEL[config=Debug] = 0
+GCC_OPTIMIZATION_LEVEL[config=Release] = 2
+SWIFT_OPTIMIZATION_LEVEL[config=Debug] = -Onone
+SWIFT_OPTIMIZATION_LEVEL[config=Release] = -O
+DEBUG_INFORMATION_FORMAT[config=Debug] = dwarf
+DEBUG_INFORMATION_FORMAT[config=Release] = dwarf-with-dsym
+GCC_PREPROCESSOR_DEFINITIONS[config=Debug] = $(inherited) DEBUG=1
+SWIFT_ACTIVE_COMPILATION_CONDITIONS[config=Debug] = $(inherited) DEBUG
+
+// Machine-local overrides (signing team, app group, bundle prefix). Gitignored.
+#include? "Local.xcconfig"

@@ -36,10 +36,11 @@ service on [this page.](https://data2data.ru/tts/)
 
 ### Supported platforms
 
-RHVoice supports Windows, GNU/Linux and Android. It is compatible with standard
+RHVoice supports Windows, GNU/Linux, Android and macOS. It is compatible with standard
 text-to-speech interfaces on these platforms: SAPI5 on Windows,
-[Speech Dispatcher](http://devel.freebsoft.org/speechd) on GNU/Linux and
-Android's text-to-speech APIs. It can also be used by the
+[Speech Dispatcher](http://devel.freebsoft.org/speechd) on GNU/Linux,
+Android's text-to-speech APIs and Apple's speech synthesis framework on macOS
+(installed voices are available to VoiceOver). It can also be used by the
 [NVDA screen reader](http://www.nvaccess.org) directly (the driver is provided
 by RHVoice itself).
 </details>
@@ -53,6 +54,7 @@ by RHVoice itself).
 
 * [Compiling on linux](Compiling-on-Linux.md)
 * [Compiling on Windows](Compiling-on-Windows.md)
+* [Compiling on macOS](Compiling-on-macOS.md)
 * [Packaging status](Packaging-status.md)
 
 ## Legal information

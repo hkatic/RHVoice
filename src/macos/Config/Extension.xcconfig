@@ -1,0 +1,9 @@
+// RHVoiceSynthesizer: the Audio Unit app extension that provides voices to the system.
+PRODUCT_NAME = RHVoiceSynthesizer
+PRODUCT_MODULE_NAME = RHVoiceSynthesizer
+PRODUCT_BUNDLE_IDENTIFIER = $(RHVOICE_BUNDLE_PREFIX).RHVoice.Synthesizer
+APPLICATION_EXTENSION_API_ONLY = YES
+SWIFT_OBJC_BRIDGING_HEADER = $(SRCROOT)/RHVoiceSynthesizer/RHVoiceSynthesizer-Bridging-Header.h
+HEADER_SEARCH_PATHS = $(inherited) $(SRCROOT)/RHVoiceCore/Bridge
+OTHER_LDFLAGS = $(inherited) -ObjC -lc++
+SKIP_INSTALL = YES

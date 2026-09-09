@@ -1,0 +1,723 @@
+{
+  "voices": {
+    "alan": {
+      "name": "Alan"
+    },
+    "aleksandr": {
+      "name": "Aleksandr"
+    },
+    "aleksandr_hq": {
+      "creators": [
+        "RHVoice Lab"
+      ],
+      "homepage": "https://rhvoice.su/voices/",
+      "license": {
+        "name": "CC BY-NC-ND 4.0 (RHVoice Lab)",
+        "spdx": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      },
+      "name": "Aleksandr-hq",
+      "source": "override"
+    },
+    "alena": {
+      "license": {
+        "name": "CC0 1.0 (public domain)",
+        "spdx": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "name": "Alena",
+      "source": "LICENSE"
+    },
+    "alicja": {
+      "creators": [
+        "Magdalena Marciniszyn",
+        "Tomasz Bilecki",
+        "Zvonimir Stanecic"
+      ],
+      "license": {
+        "name": "CC BY 4.0",
+        "spdx": "CC-BY-4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "name": "Alicja",
+      "source": "attrib.html"
+    },
+    "anatol": {
+      "name": "Anatol"
+    },
+    "anna": {
+      "name": "Anna"
+    },
+    "arina": {
+      "creators": [
+        "RHVoice Lab"
+      ],
+      "homepage": "https://rhvoice.su/voices/",
+      "license": {
+        "name": "CC BY-NC-ND 4.0 (RHVoice Lab)",
+        "spdx": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      },
+      "name": "Arina",
+      "source": "override"
+    },
+    "artemiy": {
+      "creators": [
+        "RHVoice Lab"
+      ],
+      "homepage": "https://rhvoice.su/voices/",
+      "license": {
+        "name": "CC BY-NC-ND 4.0 (RHVoice Lab)",
+        "spdx": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      },
+      "name": "Artemiy",
+      "source": "override"
+    },
+    "azamat": {
+      "name": "Azamat"
+    },
+    "bdl": {
+      "creators": [
+        "Carnegie Mellon University (CMU ARCTIC)"
+      ],
+      "license": {
+        "name": "CMU ARCTIC license (free for any use)",
+        "spdx": null,
+        "url": "http://festvox.org/cmu_arctic/"
+      },
+      "name": "Bdl",
+      "source": "override"
+    },
+    "cezary": {
+      "creators": [
+        "Paulina Gajoch",
+        "Jan Staszczyk",
+        "Tomasz bilecki",
+        "Zvonimir stanecic"
+      ],
+      "license": {
+        "name": "CC BY-NC-ND 4.0",
+        "spdx": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      },
+      "name": "Cezary",
+      "source": "attrib.html"
+    },
+    "clb": {
+      "creators": [
+        "Carnegie Mellon University (CMU ARCTIC)"
+      ],
+      "license": {
+        "name": "CMU ARCTIC license (free for any use)",
+        "spdx": null,
+        "url": "http://festvox.org/cmu_arctic/"
+      },
+      "name": "Clb",
+      "source": "override"
+    },
+    "dasha_blr": {
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "spdx": "CC-BY-SA-4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "name": "Dasha-Blr",
+      "source": "LICENSE"
+    },
+    "dasha_eng": {
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "spdx": "CC-BY-SA-4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "name": "Dasha-Eng",
+      "source": "LICENSE"
+    },
+    "dasha_rus": {
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "spdx": "CC-BY-SA-4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "name": "Dasha-Rus",
+      "source": "LICENSE"
+    },
+    "dilnavoz": {
+      "license": {
+        "name": "CC BY-NC-SA 4.0",
+        "spdx": "CC-BY-NC-SA-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+      },
+      "name": "Dilnavoz",
+      "source": "LICENSE"
+    },
+    "dragana": {
+      "copyright": "© 2023 RHVoice lab, Darko Milosevic and Zvonimir Stanecic",
+      "creators": [
+        "RHVoice lab and serbian language team"
+      ],
+      "homepage": "https://rhvoice.su",
+      "license": {
+        "name": "CC0 1.0 (public domain)",
+        "spdx": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "name": "Dragana",
+      "source": "attrib.html"
+    },
+    "elena": {
+      "name": "Elena"
+    },
+    "evgeniy_eng": {
+      "creators": [
+        "RHVoice Lab"
+      ],
+      "homepage": "https://rhvoice.su/voices/",
+      "license": {
+        "name": "CC BY-NC-ND 4.0 (RHVoice Lab)",
+        "spdx": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      },
+      "name": "Evgeniy-Eng",
+      "source": "override"
+    },
+    "evgeniy_rus": {
+      "creators": [
+        "RHVoice Lab"
+      ],
+      "homepage": "https://rhvoice.su/voices/",
+      "license": {
+        "name": "CC BY-NC-ND 4.0 (RHVoice Lab)",
+        "spdx": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      },
+      "name": "Evgeniy-Rus",
+      "source": "override"
+    },
+    "hana": {
+      "copyright": "© 2021 Vlada na Republika Severna Makedonija",
+      "creators": [
+        "LouderPages"
+      ],
+      "homepage": "https://louderpages.org",
+      "license": {
+        "name": "CC BY-NC-SA 4.0",
+        "spdx": "CC-BY-NC-SA-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+      },
+      "name": "Hana",
+      "source": "attrib.html"
+    },
+    "irina": {
+      "name": "Irina"
+    },
+    "islom": {
+      "license": {
+        "name": "CC BY-NC-SA 4.0",
+        "spdx": "CC-BY-NC-SA-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+      },
+      "name": "Islom",
+      "source": "LICENSE"
+    },
+    "jasietka": {
+      "creators": [
+        "Želmíra Zemčáková",
+        "Michal Tkáčik",
+        "Ondrej Rosík",
+        "Peter Vágner and Zvonimir Stanecic"
+      ],
+      "license": {
+        "name": "CC0 1.0 (public domain)",
+        "spdx": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "name": "Jasietka",
+      "source": "attrib.html"
+    },
+    "karmela": {
+      "creators": [
+        "Association for Improving the Education of Blind and Visually Impaired People (Uuosso)",
+        "Darko Milošević",
+        "Dorota Krać",
+        "Karmela Vukov Colić",
+        "Zvonimir Stanečić"
+      ],
+      "license": {
+        "name": "CC0 1.0 (public domain)",
+        "spdx": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "name": "Karmela",
+      "source": "attrib.html"
+    },
+    "ksp": {
+      "license": {
+        "name": "CMU ARCTIC license (free for any use)",
+        "spdx": null,
+        "url": "http://festvox.org/cmu_arctic/"
+      },
+      "name": "Ksp",
+      "source": "LICENSE"
+    },
+    "lbf": {
+      "copyright": "Copyright (C) 2026 Information and Press Service of the Government of Luxembourg",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "spdx": "CC-BY-SA-4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "name": "Mia",
+      "source": "LICENSE"
+    },
+    "lbm": {
+      "copyright": "Copyright (C) 2026 Information and Press Service of the Government of Luxembourg",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "spdx": "CC-BY-SA-4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "name": "Mil",
+      "source": "LICENSE"
+    },
+    "leticia_f123": {
+      "copyright": "Copyright (C) 2018 - 2020 Olga Yakovleva, Fernando H. F. Botelho",
+      "creators": [
+        "Olga Yakovleva",
+        "Fernando H. F. Botelho"
+      ],
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "spdx": "CC-BY-SA-4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "name": "Letícia-F123",
+      "source": "override"
+    },
+    "lyubov": {
+      "creators": [
+        "RHVoice Lab"
+      ],
+      "homepage": "https://rhvoice.su/voices/",
+      "license": {
+        "name": "CC BY-NC-ND 4.0 (RHVoice Lab)",
+        "spdx": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      },
+      "name": "Lyubov",
+      "source": "override"
+    },
+    "lyudmila_blr": {
+      "license": {
+        "name": "CC BY-NC-SA 4.0",
+        "spdx": "CC-BY-NC-SA-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+      },
+      "name": "Lyudmila-blr",
+      "source": "LICENSE"
+    },
+    "lyudmila_rus": {
+      "license": {
+        "name": "CC BY-NC-SA 4.0",
+        "spdx": "CC-BY-NC-SA-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+      },
+      "name": "Lyudmila-Rus",
+      "source": "LICENSE"
+    },
+    "mac_m1": {
+      "copyright": "© 2021 Vlada na Republika Severna Makedonija",
+      "creators": [
+        "LouderPages"
+      ],
+      "homepage": "https://louderpages.org",
+      "license": {
+        "name": "CC BY-NC-SA 4.0",
+        "spdx": "CC-BY-NC-SA-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+      },
+      "name": "Kiko",
+      "source": "attrib.html"
+    },
+    "magda": {
+      "creators": [
+        "Magda Roczeń",
+        "Roman Roczeń",
+        "Grzegorz Złotowicz"
+      ],
+      "license": {
+        "name": "CC BY 4.0",
+        "spdx": "CC-BY-4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "name": "Magda",
+      "source": "attrib.html"
+    },
+    "marianna": {
+      "creators": [
+        "RHVoice Lab"
+      ],
+      "homepage": "https://rhvoice.su/voices/",
+      "license": {
+        "name": "CC BY-NC-ND 4.0 (RHVoice Lab)",
+        "spdx": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      },
+      "name": "Marianna",
+      "source": "override"
+    },
+    "marija": {
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "spdx": "CC-BY-SA-4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "name": "Marija",
+      "source": "LICENSE"
+    },
+    "mateo": {
+      "creators": [
+        "Hablante: Mateo Cedillo",
+        "Editores de audio: muchísimas gracias a Sergey Parshakov y Sound Guard",
+        "Sugerencias para la base de datos: muchísimas gracias a Zvonimir Ztanecic",
+        "Entrenamiento y empaquetado: Mateo Cedillo en primeras versiones, Zvonimir Ztanecic en las versiones finales para publicación"
+      ],
+      "name": "Mateo",
+      "source": "attrib.html"
+    },
+    "michal": {
+      "creators": [
+        "Michał Dziwisz",
+        "Tomasz Bilecki",
+        "Zvonimir Stanecic"
+      ],
+      "license": {
+        "name": "CC0 1.0 (public domain)",
+        "spdx": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "name": "Michal",
+      "source": "attrib.html"
+    },
+    "michal_blr": {
+      "license": {
+        "name": "CC BY-NC-SA 4.0",
+        "spdx": "CC-BY-NC-SA-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+      },
+      "name": "Michal-Blr",
+      "source": "LICENSE"
+    },
+    "michal_rus": {
+      "license": {
+        "name": "CC BY-NC-SA 4.0",
+        "spdx": "CC-BY-NC-SA-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+      },
+      "name": "Michal-Rus",
+      "source": "LICENSE"
+    },
+    "mikhail": {
+      "creators": [
+        "RHVoice Lab"
+      ],
+      "homepage": "https://rhvoice.su/voices/",
+      "license": {
+        "name": "CC BY-NC-ND 4.0 (RHVoice Lab)",
+        "spdx": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      },
+      "name": "Mikhail",
+      "source": "override"
+    },
+    "natalia": {
+      "name": "Natalia"
+    },
+    "natan": {
+      "creators": [
+        "Edwin Tarka",
+        "Tomasz Bilecki",
+        "Zvonimir Stanecic"
+      ],
+      "license": {
+        "name": "CC0 1.0 (public domain)",
+        "spdx": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "name": "Natan",
+      "source": "attrib.html"
+    },
+    "natia": {
+      "copyright": "Copyright (c) 2013 - 2018 Beqa Gozalishvili, Olga Yakovleva, Vladimer Urdulashvili",
+      "creators": [
+        "Beqa Gozalishvili",
+        "Olga Yakovleva",
+        "Vladimer Urdulashvili"
+      ],
+      "license": {
+        "name": "Personal use only (see doc/en/License.md)",
+        "spdx": null,
+        "url": "https://github.com/RHVoice/RHVoice/blob/master/doc/en/License.md"
+      },
+      "name": "Natia",
+      "source": "override"
+    },
+    "nazgul": {
+      "name": "Nazgul"
+    },
+    "ondro": {
+      "creators": [
+        "Ondrej Rosík",
+        "Ondrej Rosík",
+        "Peter Vágner and Zvonimir Stanecic"
+      ],
+      "license": {
+        "name": "CC0 1.0 (public domain)",
+        "spdx": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "name": "Ondro",
+      "source": "attrib.html"
+    },
+    "paul": {
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "spdx": "CC-BY-SA-4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "name": "Paul",
+      "source": "attrib.html"
+    },
+    "pavel": {
+      "creators": [
+        "RHVoice Lab"
+      ],
+      "homepage": "https://rhvoice.su/voices/",
+      "license": {
+        "name": "CC BY-NC-ND 4.0 (RHVoice Lab)",
+        "spdx": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      },
+      "name": "Pavel",
+      "source": "override"
+    },
+    "radek": {
+      "creators": [
+        "Radek Zalud",
+        "Zvonimir Stanecic"
+      ],
+      "license": {
+        "name": "CC0 1.0 (public domain)",
+        "spdx": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "name": "Radek",
+      "source": "attrib.html"
+    },
+    "ryhor_blr": {
+      "license": {
+        "name": "CC BY-NC-SA 4.0",
+        "spdx": "CC-BY-NC-SA-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+      },
+      "name": "Ryhor-Blr",
+      "source": "LICENSE"
+    },
+    "ryhor_rus": {
+      "license": {
+        "name": "CC BY-NC-SA 4.0",
+        "spdx": "CC-BY-NC-SA-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+      },
+      "name": "Ryhor-Rus",
+      "source": "LICENSE"
+    },
+    "seva": {
+      "license": {
+        "name": "CC BY-NC-ND 4.0",
+        "spdx": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      },
+      "name": "Seva",
+      "source": "LICENSE"
+    },
+    "sevinch": {
+      "name": "Sevinch"
+    },
+    "slt": {
+      "creators": [
+        "Carnegie Mellon University (CMU ARCTIC)"
+      ],
+      "license": {
+        "name": "CMU ARCTIC license (free for any use)",
+        "spdx": null,
+        "url": "http://festvox.org/cmu_arctic/"
+      },
+      "name": "Slt",
+      "source": "override"
+    },
+    "spomenka": {
+      "creators": [
+        "Spomenka Shtimec",
+        "Sergey Parshakov",
+        "Tomasz Bilecki",
+        "Zvonimir Stanecic"
+      ],
+      "license": {
+        "name": "GNU GPL 3.0",
+        "spdx": "GPL-3.0-or-later",
+        "url": "https://www.gnu.org/licenses/gpl-3.0.html"
+      },
+      "name": "Spomenka",
+      "source": "attrib.html"
+    },
+    "suze": {
+      "name": "Suze"
+    },
+    "talgat": {
+      "creators": [
+        "Rustam Bektenov"
+      ],
+      "license": {
+        "name": "Free for non-commercial use (see doc/en/License.md)",
+        "spdx": null,
+        "url": "https://github.com/RHVoice/RHVoice/blob/master/doc/en/License.md"
+      },
+      "name": "Talgat",
+      "source": "override"
+    },
+    "tatiana": {
+      "creators": [
+        "RHVoice Lab"
+      ],
+      "homepage": "https://rhvoice.su/voices/",
+      "license": {
+        "name": "CC BY-NC-ND 4.0 (RHVoice Lab)",
+        "spdx": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      },
+      "name": "Tatiana",
+      "source": "override"
+    },
+    "timofey": {
+      "creators": [
+        "RHVoice Lab"
+      ],
+      "homepage": "https://rhvoice.su/voices/",
+      "license": {
+        "name": "CC BY-NC-ND 4.0 (RHVoice Lab)",
+        "spdx": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      },
+      "name": "Timofey",
+      "source": "override"
+    },
+    "umka": {
+      "creators": [
+        "RHVoice Lab"
+      ],
+      "homepage": "https://rhvoice.su/voices/",
+      "license": {
+        "name": "CC BY-NC-ND 4.0 (RHVoice Lab)",
+        "spdx": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      },
+      "name": "Umka",
+      "source": "override"
+    },
+    "victoria": {
+      "creators": [
+        "RHVoice Lab"
+      ],
+      "homepage": "https://rhvoice.su/voices/",
+      "license": {
+        "name": "CC BY-NC-ND 4.0 (RHVoice Lab)",
+        "spdx": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      },
+      "name": "Victoria",
+      "source": "override"
+    },
+    "vitaliy": {
+      "creators": [
+        "RHVoice Lab"
+      ],
+      "homepage": "https://rhvoice.su/voices/",
+      "license": {
+        "name": "CC BY-NC-ND 4.0 (RHVoice Lab)",
+        "spdx": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      },
+      "name": "Vitaliy",
+      "source": "override"
+    },
+    "vitaliy_ng": {
+      "creators": [
+        "RHVoice Lab"
+      ],
+      "homepage": "https://rhvoice.su/voices/",
+      "license": {
+        "name": "CC BY-NC-ND 4.0 (RHVoice Lab)",
+        "spdx": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      },
+      "name": "Vitaliy-ng",
+      "source": "override"
+    },
+    "volodymyr": {
+      "creators": [
+        "RHVoice Lab"
+      ],
+      "homepage": "https://rhvoice.su/voices/",
+      "license": {
+        "name": "CC BY-NC-ND 4.0 (RHVoice Lab)",
+        "spdx": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      },
+      "name": "Volodymyr",
+      "source": "override"
+    },
+    "vsevolod": {
+      "creators": [
+        "Artem Plaksin",
+        "Vsevolod Polishchuk",
+        "Sergey Parshakov"
+      ],
+      "license": {
+        "name": "CC BY-NC-ND 4.0",
+        "spdx": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      },
+      "name": "Vsevolod",
+      "source": "attrib.html"
+    },
+    "yuriy": {
+      "creators": [
+        "RHVoice Lab"
+      ],
+      "homepage": "https://rhvoice.su/voices/",
+      "license": {
+        "name": "CC BY-NC-ND 4.0 (RHVoice Lab)",
+        "spdx": "CC-BY-NC-ND-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      },
+      "name": "Yuriy",
+      "source": "override"
+    },
+    "zdenek": {
+      "creators": [
+        "Unidentified  Speaker",
+        "Pavel partyka",
+        "Zvonimir Stanecic"
+      ],
+      "license": {
+        "name": "CC0 1.0 (public domain)",
+        "spdx": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "name": "Zdenek",
+      "source": "attrib.html"
+    }
+  }
+}

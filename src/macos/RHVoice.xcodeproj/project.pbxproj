@@ -1,0 +1,1588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01F00EC2D4D363CC52CE54BC /* VoiceCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC5506EC2ECD23CBB7B9930 /* VoiceCatalog.swift */; };
+		0257B58B1F0CD092CCF374F2 /* hts_label.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3EF1BA5223F62084534548A /* hts_label.cpp */; };
+		04651C118513AD278969376B /* SSMLNormalizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3199BFBF10CF4D577A678681 /* SSMLNormalizerTests.swift */; };
+		06E3B27447DB6E399A4B7433 /* DemoDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22CF063731EB3C272EB5B63 /* DemoDecoderTests.swift */; };
+		08AAD601E52B5B0CDF46239B /* DataLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238A3BF44D1A30DB21855AD9 /* DataLayout.swift */; };
+		09B97E3C5020A3E4FFAC82D2 /* hts_labeller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7F1CD70409865BAB6DF3354 /* hts_labeller.cpp */; };
+		0B9A301B393623F1F593E08F /* OggVorbisDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCB071F93CB18079ADBB91E /* OggVorbisDecoder.swift */; };
+		0DDD334E1E61E39C12ED1ECC /* unicode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 610ADAEF8D4E665CA6FA97B6 /* unicode.cpp */; };
+		0E90CB5E31315D52DB0132D9 /* MarkerMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB72532303501C8EFFB108DE /* MarkerMapper.swift */; };
+		136980802B91BFFAFDB6EE54 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DE29D97C0BFB3E35B032F8 /* Log.swift */; };
+		147ACE2942DCA315B3777831 /* PackageIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B9F23098A0A07C8E6155DC /* PackageIndex.swift */; };
+		15460D7E1119A25587E3531D /* relation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4822FC24A267C42BCB340EB1 /* relation.cpp */; };
+		1932B02A21A591B21F88AA0E /* question_matcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F9B2622F93735445A938E52 /* question_matcher.cpp */; };
+		1A18BDC82D91AD355E5C151D /* userdict.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D3A6A2000C9FFE12F8FB96B /* userdict.cpp */; };
+		1BD82127A7D97AFB8A6E9E81 /* SharedPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E7C8FC39B262F0F8A7C478 /* SharedPreferences.swift */; };
+		1C73894FB99C1827A00F3E4B /* EngineHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1DC08E43A923E1B54869C1 /* EngineHolder.swift */; };
+		20EEA566FE7E6D9BA1C930E5 /* HTS_gstream.c in Sources */ = {isa = PBXBuildFile; fileRef = B1F1ADB54669A363B933DB7A /* HTS_gstream.c */; };
+		22D0F2872B41B00D13C6A46A /* SpeechSink.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9A68B535FE318FF9D733DA84 /* SpeechSink.mm */; };
+		296EC09C505C434AB7B7E100 /* RHVEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = 19A530F14AFB413FA07E749A /* RHVEngine.mm */; };
+		2B05EFD95734F6B8DD4F832E /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 768D89A826F1B214E9137C6E /* ZIPFoundation */; };
+		2D3BC228D1E1D2318CEBC112 /* HTS_model.c in Sources */ = {isa = PBXBuildFile; fileRef = B326590BC69C0FC95849E08C /* HTS_model.c */; };
+		2D64CD22CA433A021BB84482 /* vietnamese.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4875DA6684DF6034806D176 /* vietnamese.cpp */; };
+		2E39A5E5DFEDC219393464C0 /* SamplePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115C55A3D440C9633A8DB184 /* SamplePlayer.swift */; };
+		37B04ABDD4F7D37B3BB64766 /* PackageIndexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2F701B12242B6953EFFE87 /* PackageIndexTests.swift */; };
+		3803B4C047F3732A66185CAC /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = C2C28A25B3942F322BA70326 /* ZIPFoundation */; };
+		383D1A799A97C255955FDD6C /* AudioUnitFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421F77E0611A6CC45228C204 /* AudioUnitFactory.swift */; };
+		3B3CF73A030AED80076D660C /* VoiceMetadataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83A3ABADA6800F2E32AF3A0 /* VoiceMetadataStore.swift */; };
+		3F7D4886BE93BF3829B44988 /* esperanto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1D336D9120FA11CE5EC7730F /* esperanto.cpp */; };
+		40435F38DF619DDAD2834263 /* AVFAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5A372F10255C9258D7AB91 /* AVFAudio.framework */; };
+		404E07C5D8D4D2338A888E30 /* SharedPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E7C8FC39B262F0F8A7C478 /* SharedPreferences.swift */; };
+		46441FC6CDE9D9D9FEA9E5CA /* macedonian.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 94FE325D4E43EEBCC31CB0B9 /* macedonian.cpp */; };
+		4B30E9DBEE64B28DF610D389 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4DC49EF77AD7348A991EAF /* AppGroup.swift */; };
+		4B8832603F22BF01F1A975BE /* item.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D46ECA8472D9389016F5144 /* item.cpp */; };
+		4C58D2ABAD33602AEA595623 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4DC49EF77AD7348A991EAF /* AppGroup.swift */; };
+		4CD2CA8F94A0708C2F6BAC84 /* LocaleMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6C6F2386498399C013C903 /* LocaleMapping.swift */; };
+		4D7D17D83B26D8020DD0D6D0 /* path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7B257BA17A8F3DA69893313 /* path.cpp */; };
+		5009E20D1DA250F4326129CE /* document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93CA9711F4BB34E713DB8F9F /* document.cpp */; };
+		51391D3320D97C94A45C5E38 /* HTS_pstream.c in Sources */ = {isa = PBXBuildFile; fileRef = A02DCEA8269D372054F1064B /* HTS_pstream.c */; };
+		53163C7D06E5D5318233FF31 /* CatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE23AD968486476E3BB6BD0 /* CatalogTests.swift */; };
+		570264FFD72C308D7821A239 /* InfoFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50174E6D08A9F1FC33BB12BB /* InfoFile.swift */; };
+		574AD81D49E9846ADB9DEB91 /* VoiceCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC5506EC2ECD23CBB7B9930 /* VoiceCatalog.swift */; };
+		57E2A8C53872A6E4B993F8F0 /* hts_engine_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 014DAFE51DD8D7A839C1E9A6 /* hts_engine_impl.cpp */; };
+		5B08932205C2193CFE345AAE /* IndexRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C7BC168A7698C027F838C5 /* IndexRepository.swift */; };
+		5BFCA9E62FB5CF2CCE484D11 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D609AF39DC69F591AB266ED /* AudioToolbox.framework */; };
+		6141CE2DC66294261E840863 /* georgian.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F19C90D398FCA0414EA0CAEA /* georgian.cpp */; };
+		6222858254DFDD1D932355DA /* HTS_audio.c in Sources */ = {isa = PBXBuildFile; fileRef = 90D3C570028A6929D8FE1587 /* HTS_audio.c */; };
+		63D6292C5CF6E3C1FCFD4A0F /* LocaleMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6C6F2386498399C013C903 /* LocaleMapping.swift */; };
+		6A4EC1F9198B1EF7A4436D71 /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DAAE202034FF63B6A16AD42 /* test.cpp */; };
+		6ADCAFA5F113A8E73192B8AC /* DataLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238A3BF44D1A30DB21855AD9 /* DataLayout.swift */; };
+		6BCBA992E7821E9768D10E48 /* params.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BE2E8D77116DFDE92E3DD64 /* params.cpp */; };
+		6C301DDA528457DF42B1F5F2 /* emoji.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A157BDDE426F15148936239 /* emoji.cpp */; };
+		71B2151153D9C57FA5170826 /* libRHVoiceCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0199693E38C612B4E0796718 /* libRHVoiceCore.a */; };
+		73591C2BCC5083538093423F /* PackSidecar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB144903C375C65DEC6D09A /* PackSidecar.swift */; };
+		749E51C7EC246DD6BD22958E /* english_id.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C7639F44062B2C7680CC15B /* english_id.cpp */; };
+		760848999B2EA7E2B087BA80 /* HTS_misc.c in Sources */ = {isa = PBXBuildFile; fileRef = 9736D410DA45A8AD7A8CA78D /* HTS_misc.c */; };
+		77DDE7462D75C8B025B970C2 /* io.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 137E50544D03520E72240AA0 /* io.cpp */; };
+		7E827554F5AC4072FCF17453 /* equalizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 591D950CCB459C21022C529A /* equalizer.cpp */; };
+		7EFF954C3F4063B375FCC158 /* unit_db.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A4524B1C4155CDC11B3DC60 /* unit_db.cpp */; };
+		83702FF88454812BA4FB0883 /* SSMLNormalizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2373EA97EE063131001EA98 /* SSMLNormalizer.cpp */; };
+		89CBA3B42A052D4B570E2802 /* DependencyResolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5302B757F0A972070DB9A65E /* DependencyResolverTests.swift */; };
+		8A4F37E9FE4DCDAA5CE37C22 /* audio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7EA421EEF177694D64FEECD /* audio.cpp */; };
+		8B00D1F79CC1864740DECE31 /* HTS_engine.c in Sources */ = {isa = PBXBuildFile; fileRef = 428C59E49CE9443F6CADCE10 /* HTS_engine.c */; };
+		8C1B3A4AE09B34B577970602 /* InstallIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C25EEABC859DFEF50A679C /* InstallIntegrationTests.swift */; };
+		8DB2B4FAA4713E8C5E952390 /* hts_engine_call.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F44D10988CA773FA74D0AA32 /* hts_engine_call.cpp */; };
+		8DC99BD882BBCC909707CE50 /* bpf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DD7CC77D1F6F9D5A668B60B /* bpf.cpp */; };
+		8E29876779CE59EAD38D244E /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 6B4F9903A7D4D9FB32F6B225 /* Localizable.xcstrings */; };
+		94DE429BAAD8A85776D996F0 /* RHVoiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072A1203C827B847AABAE0C9 /* RHVoiceApp.swift */; };
+		991B9F9FE0A5FEE6018193E8 /* packages-fallback.json in Resources */ = {isa = PBXBuildFile; fileRef = 545A157C485C55DE91C49770 /* packages-fallback.json */; };
+		9A00D7BE1F8AEAE6B7FD72E4 /* config.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3CA1B19C1C3C8BBF049A3EE /* config.cpp */; };
+		A2395B120833247A8DE4CFFA /* PackageExtractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E022375BB8841D73A85E9CDC /* PackageExtractorTests.swift */; };
+		A2A77C3F43CAA19C4593F6EA /* data_only_language.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92A6B55190949D32F5D5D442 /* data_only_language.cpp */; };
+		A6D3A477753C77AA8921CEF5 /* model_answer_cache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB75EAABAFBA88A3F9AF1F71 /* model_answer_cache.cpp */; };
+		A6FA6E09FB5E23B5F689C377 /* utterance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A14B61CB56E0908F44705575 /* utterance.cpp */; };
+		A91466D01B134321BF1C5E7B /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563F847DC286C809CAB2416 /* AppModel.swift */; };
+		ABD39652CD76BCE1528FC1F2 /* RHVoiceSynthesizer.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 510D692553745AD0C311F02B /* RHVoiceSynthesizer.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AC780FB7D834C852ABE2D122 /* PackSidecar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB144903C375C65DEC6D09A /* PackSidecar.swift */; };
+		AF61CE0A7D61AA737EEB8051 /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6FA9173E31C8D8124A129E /* StatusBar.swift */; };
+		AF8C864E74E7B27FA794EDB4 /* PackageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8A93FB8651036188F83C3 /* PackageDownloader.swift */; };
+		B37F2487038FF6366183B000 /* limiter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F682C44CDD404C3E1FC800C5 /* limiter.cpp */; };
+		B3ACD6E58974B68C71EB7935 /* stb_vorbis_impl.c in Sources */ = {isa = PBXBuildFile; fileRef = B24C8F87FA314CCEB9148AB4 /* stb_vorbis_impl.c */; };
+		B40D92BED863DB712DF3BFAB /* libRHVoiceCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0199693E38C612B4E0796718 /* libRHVoiceCore.a */; };
+		B45670131C0BC4D469F878A9 /* DependencyResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058857D45605178573B046E0 /* DependencyResolver.swift */; };
+		B5A9F0E825E69D76B4C3A4D8 /* str_hts_engine_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 239539956018076B6A4FE4CD /* str_hts_engine_impl.cpp */; };
+		B944727E3D86469A5FB7FE0D /* RHVoiceAudioUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659A9C389259D870EDE24BC5 /* RHVoiceAudioUnit.swift */; };
+		B999331832EE9749CEC61EAA /* LanguageSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA3DF6CB55C720186CC83B8 /* LanguageSidebar.swift */; };
+		BA2348688AF8ECABFD7D1728 /* speech_processor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 601BC776CA749F1DCB341A7E /* speech_processor.cpp */; };
+		BD87AF19FE73634340FF0151 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A1E686D55E5AAC6076BEED /* SettingsView.swift */; };
+		BEE85E980054707F06F538F3 /* HTS_sstream.c in Sources */ = {isa = PBXBuildFile; fileRef = 730FC039B8662547E14DDAA5 /* HTS_sstream.c */; };
+		C004AD962E5B5FA1ED2E9BB3 /* ini_parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A07562AA511BA4E58FB7A30F /* ini_parser.cpp */; };
+		C2465C3BEA0DF75312307F2D /* voice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7C30873076C3CC1684881F6A /* voice.cpp */; };
+		C458AAF6F4FF500558DEA366 /* tatar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3392C5CBCF13CF2A09032BE /* tatar.cpp */; };
+		C505027E0678946F84A17815 /* HTS_label.c in Sources */ = {isa = PBXBuildFile; fileRef = C43FD52902F5D2A9ADE96BD0 /* HTS_label.c */; };
+		C6090FD4D0E59031F2C89AFA /* english.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F6279FD869E7E547E772EBE /* english.cpp */; };
+		C6B9B241B2C1DD8F74439A94 /* file_playback_stream_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A29B096458AF7F2EB9E9B035 /* file_playback_stream_impl.cpp */; };
+		C914BB8625E94F9B2319A56F /* hts_vocoder_wrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 089CE2577A13E11FC2383B05 /* hts_vocoder_wrapper.cpp */; };
+		CBC994FF443DA627F4442359 /* VoiceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27040E2CAB84C76E481ABC00 /* VoiceListView.swift */; };
+		CD09D5A5874F9ABA7812C969 /* ukrainian.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 487678D6CF2DA438E41628AA /* ukrainian.cpp */; };
+		D31A58BA8D1526C5026A12FC /* playback_stream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7EF3D34A14B8779DDD91517 /* playback_stream.cpp */; };
+		D5F1BD31B53ABE0C11E825E0 /* phoneme_set.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68771A93745714335024CDDF /* phoneme_set.cpp */; };
+		D702370D1AE9F361C4C4089D /* voice-metadata.json in Resources */ = {isa = PBXBuildFile; fileRef = F3A5730BE50BA694A6450577 /* voice-metadata.json */; };
+		D9606FEB98B597BFE8A41DC6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D1AAC0AB41A23375382FAD /* ContentView.swift */; };
+		D962D5819A8F6E1E503387A0 /* SpeechRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01616B23C057876F0D251C2 /* SpeechRegistration.swift */; };
+		DA02917965C2F4DB52A6873B /* brazilian_portuguese.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FE3D3E2D5995C0AA5E09F32 /* brazilian_portuguese.cpp */; };
+		DC371A6437000A315ED1141D /* engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F394CA6E750F9587DDE6A2BC /* engine.cpp */; };
+		DFC633E66CB8B2AF55F875EA /* libRHVoiceCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0199693E38C612B4E0796718 /* libRHVoiceCore.a */; };
+		E00FC096618C8D13DCEBB01C /* pitch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3AEFDB0704D1072A7740554 /* pitch.cpp */; };
+		E39167B3494E3AF3CF972474 /* AVFAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5A372F10255C9258D7AB91 /* AVFAudio.framework */; };
+		E42E792241BBB018240B1E5F /* lts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BDC60BAAE39218B9AE1493C /* lts.cpp */; };
+		E656FCD99E5A2283D69AEDAE /* russian.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D33A4C2D196BA09EE683913 /* russian.cpp */; };
+		E775636733C3F54371EA0605 /* InfoFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50174E6D08A9F1FC33BB12BB /* InfoFile.swift */; };
+		E96A999A18529485D9B06161 /* EngineHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1DC08E43A923E1B54869C1 /* EngineHolder.swift */; };
+		EBB0F7BD31347BAE08F3F37A /* dtree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2366C08C4CFEC622FEF07BA5 /* dtree.cpp */; };
+		EE4AE3D7AC723C31EB7B8DC9 /* VoiceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1B8A0527C68D6868F45EDC /* VoiceRow.swift */; };
+		EFCCD53EE5811AA760838E83 /* fst.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E693CEC4D8A0092A5FF74752 /* fst.cpp */; };
+		F21D07FBB25B77463E6349C2 /* DemoDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135E60583135BBD33A724DF2 /* DemoDecoder.swift */; };
+		F2DF1F775250AADF497F1EDC /* kyrgyz.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B52F3F63A6982AA22AE804C1 /* kyrgyz.cpp */; };
+		F5D831DE5E5FB81D9E0822D4 /* language.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 837795161F67621DD512A245 /* language.cpp */; };
+		F9521602FBE2BD6E95FADD96 /* HTS_vocoder.c in Sources */ = {isa = PBXBuildFile; fileRef = C341027550D4038B9E463294 /* HTS_vocoder.c */; };
+		FDD73E9D23065B6A2685C543 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DE29D97C0BFB3E35B032F8 /* Log.swift */; };
+		FE06A34D92AA0F937341471D /* PackageExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F717956168E97B14F57906D /* PackageExtractor.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		252F1A5328B1743F0ED92F52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF7FBD399A43915E1A5BF654 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04A0D5C18F51332CF3E09058;
+			remoteInfo = RHVoiceCore;
+		};
+		3A5F2A08B2EF1E39F516E37E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF7FBD399A43915E1A5BF654 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B9F1E29DE35B985BD47C5A6;
+			remoteInfo = RHVoiceSynthesizer;
+		};
+		572FDC9A3EF15D226B54BD70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF7FBD399A43915E1A5BF654 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04A0D5C18F51332CF3E09058;
+			remoteInfo = RHVoiceCore;
+		};
+		91D2B89E1FB7B9D4967B7430 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF7FBD399A43915E1A5BF654 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04A0D5C18F51332CF3E09058;
+			remoteInfo = RHVoiceCore;
+		};
+		DC323E1C5D788E1229DA9A77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF7FBD399A43915E1A5BF654 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF0DD303379F0CA7A6D8D09A;
+			remoteInfo = RHVoice;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F043C974C0E38A600E1E9AED /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				ABD39652CD76BCE1528FC1F2 /* RHVoiceSynthesizer.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		014DAFE51DD8D7A839C1E9A6 /* hts_engine_impl.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hts_engine_impl.cpp; sourceTree = "<group>"; };
+		0199693E38C612B4E0796718 /* libRHVoiceCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRHVoiceCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		035D58F0ED6487ED8456B972 /* SSMLNormalizer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SSMLNormalizer.hpp; sourceTree = "<group>"; };
+		058857D45605178573B046E0 /* DependencyResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyResolver.swift; sourceTree = "<group>"; };
+		065012F9B627DA0A30F2F8DF /* voice-metadata.overrides.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "voice-metadata.overrides.json"; sourceTree = "<group>"; };
+		069A2728E410BF72873C5287 /* list-voices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "list-voices.swift"; sourceTree = "<group>"; };
+		072A1203C827B847AABAE0C9 /* RHVoiceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RHVoiceApp.swift; sourceTree = "<group>"; };
+		089CE2577A13E11FC2383B05 /* hts_vocoder_wrapper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hts_vocoder_wrapper.cpp; sourceTree = "<group>"; };
+		0BC5506EC2ECD23CBB7B9930 /* VoiceCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceCatalog.swift; sourceTree = "<group>"; };
+		0C7886F09A66F5139DECE7ED /* Local.xcconfig.template */ = {isa = PBXFileReference; path = Local.xcconfig.template; sourceTree = "<group>"; };
+		0D46ECA8472D9389016F5144 /* item.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = item.cpp; sourceTree = "<group>"; };
+		0D67ED2A87A31EE7538122D9 /* params.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = params.hpp; sourceTree = "<group>"; };
+		11569418ACAC47A7C55D9833 /* xml.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = xml.hpp; sourceTree = "<group>"; };
+		115C55A3D440C9633A8DB184 /* SamplePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplePlayer.swift; sourceTree = "<group>"; };
+		1238D642B4D48F9042C2F283 /* hts_engine_impl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = hts_engine_impl.hpp; sourceTree = "<group>"; };
+		124F6BFC6C30719FE1495931 /* question_matcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = question_matcher.h; sourceTree = "<group>"; };
+		135E60583135BBD33A724DF2 /* DemoDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoDecoder.swift; sourceTree = "<group>"; };
+		137E50544D03520E72240AA0 /* io.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = io.cpp; sourceTree = "<group>"; };
+		13FAD5607923E87C07BF15AF /* model_answer_cache.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = model_answer_cache.hpp; sourceTree = "<group>"; };
+		16AB6928FB8BA53D16729B5B /* georgian.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = georgian.hpp; sourceTree = "<group>"; };
+		19A530F14AFB413FA07E749A /* RHVEngine.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RHVEngine.mm; sourceTree = "<group>"; };
+		1C5C7F1E63852284158BD233 /* RHVoiceSynthesizer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RHVoiceSynthesizer-Bridging-Header.h"; sourceTree = "<group>"; };
+		1D336D9120FA11CE5EC7730F /* esperanto.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = esperanto.cpp; sourceTree = "<group>"; };
+		1D7E3AF8B3A997DE83AD7581 /* hts_vocoder_wrapper.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = hts_vocoder_wrapper.hpp; sourceTree = "<group>"; };
+		1DD7CC77D1F6F9D5A668B60B /* bpf.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = bpf.cpp; sourceTree = "<group>"; };
+		208DA643D4D9AE7959324412 /* RHVoice_common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHVoice_common.h; sourceTree = "<group>"; };
+		21DC36E7B54B0B1DB505ADB9 /* ukrainian.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ukrainian.hpp; sourceTree = "<group>"; };
+		22C2B5F951B5C68B8440E38F /* capture-window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "capture-window.swift"; sourceTree = "<group>"; };
+		22EF4781418A9949909C44B6 /* RHVEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHVEngine.h; sourceTree = "<group>"; };
+		2366C08C4CFEC622FEF07BA5 /* dtree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = dtree.cpp; sourceTree = "<group>"; };
+		238A3BF44D1A30DB21855AD9 /* DataLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLayout.swift; sourceTree = "<group>"; };
+		239539956018076B6A4FE4CD /* str_hts_engine_impl.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = str_hts_engine_impl.cpp; sourceTree = "<group>"; };
+		24AC453256DD7BCF499E381F /* trie.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = trie.hpp; sourceTree = "<group>"; };
+		27040E2CAB84C76E481ABC00 /* VoiceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceListView.swift; sourceTree = "<group>"; };
+		273D726346C82C4247B788AA /* RHVoiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RHVoiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A1DC08E43A923E1B54869C1 /* EngineHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineHolder.swift; sourceTree = "<group>"; };
+		2BA3DF6CB55C720186CC83B8 /* LanguageSidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSidebar.swift; sourceTree = "<group>"; };
+		2BAC15F38DF07B72D14D13F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2D73AD11E7CD2CD7B845AE64 /* RHVoice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RHVoice.entitlements; sourceTree = "<group>"; };
+		2FE02B56F1F3B6B47C4AE98C /* userdict.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = userdict.hpp; sourceTree = "<group>"; };
+		3199BFBF10CF4D577A678681 /* SSMLNormalizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSMLNormalizerTests.swift; sourceTree = "<group>"; };
+		33D1AAC0AB41A23375382FAD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3563F847DC286C809CAB2416 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		35C25EEABC859DFEF50A679C /* InstallIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallIntegrationTests.swift; sourceTree = "<group>"; };
+		36D06AAC979F84D26C7721E3 /* fst.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fst.hpp; sourceTree = "<group>"; };
+		36E7C8FC39B262F0F8A7C478 /* SharedPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedPreferences.swift; sourceTree = "<group>"; };
+		37336F5E89C7C531FE30A718 /* CLI.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CLI.xcconfig; sourceTree = "<group>"; };
+		391C6AF52BC81FA99DD13A37 /* config.h.in */ = {isa = PBXFileReference; path = config.h.in; sourceTree = "<group>"; };
+		3A27F9367D1E37031F8DEB91 /* document.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = document.hpp; sourceTree = "<group>"; };
+		3B4E7D097628AFC74FD55B91 /* rules.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = rules.hpp; sourceTree = "<group>"; };
+		3C988FC4510CA8344F5B9F46 /* config.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = config.hpp; sourceTree = "<group>"; };
+		3D44136E567C7F98FD9731FA /* speech_processing_chain.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = speech_processing_chain.hpp; sourceTree = "<group>"; };
+		3EE7B63C83A1D4CCA6FA2C53 /* hts_label.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = hts_label.hpp; sourceTree = "<group>"; };
+		3F7010CEBD61646CCF610728 /* language.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = language.hpp; sourceTree = "<group>"; };
+		3F9B2622F93735445A938E52 /* question_matcher.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = question_matcher.cpp; sourceTree = "<group>"; };
+		3FF2D3E922D61C33DB2CACC4 /* RHVoice-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RHVoice-Bridging-Header.h"; sourceTree = "<group>"; };
+		421F77E0611A6CC45228C204 /* AudioUnitFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUnitFactory.swift; sourceTree = "<group>"; };
+		428C59E49CE9443F6CADCE10 /* HTS_engine.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = HTS_engine.c; sourceTree = "<group>"; };
+		4363BB2C99CFF4288058FBB5 /* build.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
+		440609C12A6C44118355C28A /* model_answer_cache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = model_answer_cache.h; sourceTree = "<group>"; };
+		44C4F367501648A08622559A /* engine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = engine.hpp; sourceTree = "<group>"; };
+		4822FC24A267C42BCB340EB1 /* relation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = relation.cpp; sourceTree = "<group>"; };
+		487678D6CF2DA438E41628AA /* ukrainian.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ukrainian.cpp; sourceTree = "<group>"; };
+		4AA1CED485E77B94049606B0 /* api.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = api.hpp; sourceTree = "<group>"; };
+		4B6C6F2386498399C013C903 /* LocaleMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleMapping.swift; sourceTree = "<group>"; };
+		4BCB071F93CB18079ADBB91E /* OggVorbisDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OggVorbisDecoder.swift; sourceTree = "<group>"; };
+		4D33A4C2D196BA09EE683913 /* russian.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = russian.cpp; sourceTree = "<group>"; };
+		4F717956168E97B14F57906D /* PackageExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageExtractor.swift; sourceTree = "<group>"; };
+		50174E6D08A9F1FC33BB12BB /* InfoFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoFile.swift; sourceTree = "<group>"; };
+		510D692553745AD0C311F02B /* RHVoiceSynthesizer.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RHVoiceSynthesizer.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		5302B757F0A972070DB9A65E /* DependencyResolverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyResolverTests.swift; sourceTree = "<group>"; };
+		540EDD41AE66007F4620121D /* tts_markup.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = tts_markup.hpp; sourceTree = "<group>"; };
+		545A157C485C55DE91C49770 /* packages-fallback.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "packages-fallback.json"; sourceTree = "<group>"; };
+		591D950CCB459C21022C529A /* equalizer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = equalizer.cpp; sourceTree = "<group>"; };
+		5B23FB4933654D53B6D1507A /* english_id.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = english_id.hpp; sourceTree = "<group>"; };
+		5C7639F44062B2C7680CC15B /* english_id.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = english_id.cpp; sourceTree = "<group>"; };
+		5D609AF39DC69F591AB266ED /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		5F6279FD869E7E547E772EBE /* english.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = english.cpp; sourceTree = "<group>"; };
+		5F93BBAF63E1680E042CEC2E /* unicode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = unicode.hpp; sourceTree = "<group>"; };
+		5FE3D3E2D5995C0AA5E09F32 /* brazilian_portuguese.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = brazilian_portuguese.cpp; sourceTree = "<group>"; };
+		601BC776CA749F1DCB341A7E /* speech_processor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = speech_processor.cpp; sourceTree = "<group>"; };
+		60484A663772BF469791D012 /* .gitignore */ = {isa = PBXFileReference; path = .gitignore; sourceTree = "<group>"; };
+		6052A344035C89F4CAEE0818 /* CoreHeaders.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CoreHeaders.xcconfig; sourceTree = "<group>"; };
+		610ADAEF8D4E665CA6FA97B6 /* unicode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = unicode.cpp; sourceTree = "<group>"; };
+		63BB5E5284D2F2E91B7E96B9 /* brazilian_portuguese.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = brazilian_portuguese.hpp; sourceTree = "<group>"; };
+		6450F250DA2D764D77F558E3 /* bpf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bpf.h; sourceTree = "<group>"; };
+		659A9C389259D870EDE24BC5 /* RHVoiceAudioUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RHVoiceAudioUnit.swift; sourceTree = "<group>"; };
+		6705138992C7EC4559D7F1FF /* RHVoiceCLI */ = {isa = PBXFileReference; includeInIndex = 0; path = RHVoiceCLI; sourceTree = BUILT_PRODUCTS_DIR; };
+		67717A63856D3D642ADEB8A2 /* voice_profile.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = voice_profile.hpp; sourceTree = "<group>"; };
+		68771A93745714335024CDDF /* phoneme_set.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = phoneme_set.cpp; sourceTree = "<group>"; };
+		6A4524B1C4155CDC11B3DC60 /* unit_db.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = unit_db.cpp; sourceTree = "<group>"; };
+		6B4F9903A7D4D9FB32F6B225 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		6BDC60BAAE39218B9AE1493C /* lts.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lts.cpp; sourceTree = "<group>"; };
+		6BE2E8D77116DFDE92E3DD64 /* params.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = params.cpp; sourceTree = "<group>"; };
+		6FECB6A74E968DBD518796E0 /* generate-voice-metadata.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = "generate-voice-metadata.py"; sourceTree = "<group>"; };
+		722CE947891F04013C204D61 /* esperanto.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = esperanto.hpp; sourceTree = "<group>"; };
+		72836B5D5AF13610C4CA830C /* notarize.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = notarize.sh; sourceTree = "<group>"; };
+		730FC039B8662547E14DDAA5 /* HTS_sstream.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = HTS_sstream.c; sourceTree = "<group>"; };
+		73DB99E753B1AFC7732FC8D8 /* path.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = path.hpp; sourceTree = "<group>"; };
+		748D92A10642F9A3A0B35EF5 /* stress_pattern.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = stress_pattern.hpp; sourceTree = "<group>"; };
+		755D1929F1504EB9D4B9F999 /* io.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = io.hpp; sourceTree = "<group>"; };
+		76427F5CE19FA9BD05385A18 /* Extension.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Extension.xcconfig; sourceTree = "<group>"; };
+		7A157BDDE426F15148936239 /* emoji.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = emoji.cpp; sourceTree = "<group>"; };
+		7A22D776B93E7B2A8B7E29B0 /* hts_input.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = hts_input.hpp; sourceTree = "<group>"; };
+		7BC8DC71744F155797AEF2BC /* vietnamese.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = vietnamese.hpp; sourceTree = "<group>"; };
+		7C30873076C3CC1684881F6A /* voice.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = voice.cpp; sourceTree = "<group>"; };
+		7E2F701B12242B6953EFFE87 /* PackageIndexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageIndexTests.swift; sourceTree = "<group>"; };
+		801B1D0824B6D082C20D6BCA /* russian.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = russian.hpp; sourceTree = "<group>"; };
+		837795161F67621DD512A245 /* language.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = language.cpp; sourceTree = "<group>"; };
+		855133225666947201A72C46 /* Core.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Core.xcconfig; sourceTree = "<group>"; };
+		88031482EAF1C3C2B2A47219 /* unit_db.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = unit_db.hpp; sourceTree = "<group>"; };
+		88302609AB796BB0F2A4A431 /* client.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = client.hpp; sourceTree = "<group>"; };
+		893FA7495AB40FD2CFE5306B /* RHVoice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHVoice.h; sourceTree = "<group>"; };
+		8A6FA9173E31C8D8124A129E /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
+		8C46C56213839129D0298BF0 /* pitch.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = pitch.hpp; sourceTree = "<group>"; };
+		8D3A6A2000C9FFE12F8FB96B /* userdict.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = userdict.cpp; sourceTree = "<group>"; };
+		907E8868D5594E82BB560B4A /* voice.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = voice.hpp; sourceTree = "<group>"; };
+		90D3C570028A6929D8FE1587 /* HTS_audio.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = HTS_audio.c; sourceTree = "<group>"; };
+		910567589F34A339642AE983 /* hts_labeller.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = hts_labeller.hpp; sourceTree = "<group>"; };
+		919AC767A65823874CD2156A /* value.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = value.hpp; sourceTree = "<group>"; };
+		91DB144257E00E04255E7314 /* limiter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = limiter.hpp; sourceTree = "<group>"; };
+		92110036B1718BB0C9EC620B /* utf.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = utf.hpp; sourceTree = "<group>"; };
+		92A6B55190949D32F5D5D442 /* data_only_language.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = data_only_language.cpp; sourceTree = "<group>"; };
+		938A2A021F12D773BEE7DD40 /* ssml.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ssml.hpp; sourceTree = "<group>"; };
+		93CA9711F4BB34E713DB8F9F /* document.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = document.cpp; sourceTree = "<group>"; };
+		94FE325D4E43EEBCC31CB0B9 /* macedonian.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = macedonian.cpp; sourceTree = "<group>"; };
+		9589E9B05B27427D44B08583 /* SConscript */ = {isa = PBXFileReference; path = SConscript; sourceTree = "<group>"; };
+		9736D410DA45A8AD7A8CA78D /* HTS_misc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = HTS_misc.c; sourceTree = "<group>"; };
+		98C7BC168A7698C027F838C5 /* IndexRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexRepository.swift; sourceTree = "<group>"; };
+		9A68B535FE318FF9D733DA84 /* SpeechSink.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SpeechSink.mm; sourceTree = "<group>"; };
+		9AE8A93FB8651036188F83C3 /* PackageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDownloader.swift; sourceTree = "<group>"; };
+		9D4DC49EF77AD7348A991EAF /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
+		9D50D7E1195E8B743F4AEAEE /* str.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = str.hpp; sourceTree = "<group>"; };
+		9DAAE202034FF63B6A16AD42 /* test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
+		A02DCEA8269D372054F1064B /* HTS_pstream.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = HTS_pstream.c; sourceTree = "<group>"; };
+		A07562AA511BA4E58FB7A30F /* ini_parser.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ini_parser.cpp; sourceTree = "<group>"; };
+		A14B61CB56E0908F44705575 /* utterance.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = utterance.cpp; sourceTree = "<group>"; };
+		A29B096458AF7F2EB9E9B035 /* file_playback_stream_impl.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = file_playback_stream_impl.cpp; sourceTree = "<group>"; };
+		A6106E1E549A6DADC9BBED01 /* speech_processor.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = speech_processor.hpp; sourceTree = "<group>"; };
+		A721D6C796751F1590D76B6F /* OSLogger.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = OSLogger.hpp; sourceTree = "<group>"; };
+		A7EF3D34A14B8779DDD91517 /* playback_stream.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = playback_stream.cpp; sourceTree = "<group>"; };
+		A917828CE65ACDFBE3C267E6 /* str_hts_engine_impl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = str_hts_engine_impl.hpp; sourceTree = "<group>"; };
+		ABAFB8C13173989C7EAC7A4D /* equalizer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = equalizer.hpp; sourceTree = "<group>"; };
+		AC089EA2F532DD1D6FA42676 /* hts_engine_call.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = hts_engine_call.hpp; sourceTree = "<group>"; };
+		AD1A13F2A8881B72768CC5EB /* SpeechSink.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SpeechSink.hpp; sourceTree = "<group>"; };
+		AE5A372F10255C9258D7AB91 /* AVFAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFAudio.framework; path = System/Library/Frameworks/AVFAudio.framework; sourceTree = SDKROOT; };
+		AE7C32D7AF889AA356EC4EEC /* item.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = item.hpp; sourceTree = "<group>"; };
+		AF2CDB2212AB3A961DDF2C06 /* RHVoiceSynthesizer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RHVoiceSynthesizer.entitlements; sourceTree = "<group>"; };
+		B12C0A946D87ACC502E2915D /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
+		B1F1ADB54669A363B933DB7A /* HTS_gstream.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = HTS_gstream.c; sourceTree = "<group>"; };
+		B1F81B7C232A34FED60E956E /* data_only_language.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = data_only_language.hpp; sourceTree = "<group>"; };
+		B24C8F87FA314CCEB9148AB4 /* stb_vorbis_impl.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = stb_vorbis_impl.c; sourceTree = "<group>"; };
+		B2EA7AA6B49B5C475DE9E31A /* resource.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = resource.hpp; sourceTree = "<group>"; };
+		B326590BC69C0FC95849E08C /* HTS_model.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = HTS_model.c; sourceTree = "<group>"; };
+		B3392C5CBCF13CF2A09032BE /* tatar.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tatar.cpp; sourceTree = "<group>"; };
+		B52F3F63A6982AA22AE804C1 /* kyrgyz.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = kyrgyz.cpp; sourceTree = "<group>"; };
+		B6705A9B248ABFCEE0BD6AC1 /* emoji.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = emoji.hpp; sourceTree = "<group>"; };
+		B7B257BA17A8F3DA69893313 /* path.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = path.cpp; sourceTree = "<group>"; };
+		B7EA421EEF177694D64FEECD /* audio.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = audio.cpp; sourceTree = "<group>"; };
+		BAAED9C9908A830E6B83D69E /* RHVSynthesisSession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHVSynthesisSession.h; sourceTree = "<group>"; };
+		BAFA9D498C32653B1228CCD8 /* speak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = speak.swift; sourceTree = "<group>"; };
+		BB3BE75FC9592FCD13647FED /* tatar.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = tatar.hpp; sourceTree = "<group>"; };
+		BC7DE8A060ECFE224467D89C /* Local.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Local.xcconfig; sourceTree = "<group>"; };
+		C073E5E89D43C4C4DBB870FD /* import-android-strings.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = "import-android-strings.py"; sourceTree = "<group>"; };
+		C1A1E686D55E5AAC6076BEED /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		C341027550D4038B9E463294 /* HTS_vocoder.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = HTS_vocoder.c; sourceTree = "<group>"; };
+		C3EF1BA5223F62084534548A /* hts_label.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hts_label.cpp; sourceTree = "<group>"; };
+		C43FD52902F5D2A9ADE96BD0 /* HTS_label.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = HTS_label.c; sourceTree = "<group>"; };
+		C4875DA6684DF6034806D176 /* vietnamese.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = vietnamese.cpp; sourceTree = "<group>"; };
+		C521ED49019B1366B427333B /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		C5444E6B821754FC03808EC9 /* tone.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = tone.hpp; sourceTree = "<group>"; };
+		C550BC45A3EEA0446AF85E0A /* relation.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = relation.hpp; sourceTree = "<group>"; };
+		C60B255693B6795FAD688C28 /* macedonian.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = macedonian.hpp; sourceTree = "<group>"; };
+		C6FDFCB3DF557D61A280CB15 /* App.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = App.xcconfig; sourceTree = "<group>"; };
+		C7870FD81930464ACDA89B75 /* exception.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = exception.hpp; sourceTree = "<group>"; };
+		C7F1CD70409865BAB6DF3354 /* hts_labeller.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hts_labeller.cpp; sourceTree = "<group>"; };
+		C83A3ABADA6800F2E32AF3A0 /* VoiceMetadataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMetadataStore.swift; sourceTree = "<group>"; };
+		CF3B5D4CB687BD28EE7AB52B /* dtree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = dtree.hpp; sourceTree = "<group>"; };
+		D1671CE7559D0558C7F66292 /* utterance.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = utterance.hpp; sourceTree = "<group>"; };
+		D1DE29D97C0BFB3E35B032F8 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		D4D9801B46B3030821B333A1 /* events.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = events.hpp; sourceTree = "<group>"; };
+		D86F51DCB5C01F4F6BD00A34 /* property.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = property.hpp; sourceTree = "<group>"; };
+		D990427E4A7AD5527FCB9E90 /* stb_vorbis.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stb_vorbis.h; sourceTree = "<group>"; };
+		DAE23AD968486476E3BB6BD0 /* CatalogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogTests.swift; sourceTree = "<group>"; };
+		E01616B23C057876F0D251C2 /* SpeechRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRegistration.swift; sourceTree = "<group>"; };
+		E022375BB8841D73A85E9CDC /* PackageExtractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageExtractorTests.swift; sourceTree = "<group>"; };
+		E201F0E1FD101D1CA7A4064B /* RHVoiceBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHVoiceBridge.h; sourceTree = "<group>"; };
+		E22CF063731EB3C272EB5B63 /* DemoDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoDecoderTests.swift; sourceTree = "<group>"; };
+		E2373EA97EE063131001EA98 /* SSMLNormalizer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SSMLNormalizer.cpp; sourceTree = "<group>"; };
+		E3CA1B19C1C3C8BBF049A3EE /* config.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = config.cpp; sourceTree = "<group>"; };
+		E677B3F1C7E79938AE1D520C /* english.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = english.hpp; sourceTree = "<group>"; };
+		E693CEC4D8A0092A5FF74752 /* fst.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = fst.cpp; sourceTree = "<group>"; };
+		E83189D918E4954FC98604B8 /* quality_setting.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = quality_setting.hpp; sourceTree = "<group>"; };
+		E8327FE32AF48EBB3D7FA7E8 /* threading.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = threading.hpp; sourceTree = "<group>"; };
+		EA291AA3581861881DD97B27 /* sample_rate.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sample_rate.hpp; sourceTree = "<group>"; };
+		EB72532303501C8EFFB108DE /* MarkerMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerMapper.swift; sourceTree = "<group>"; };
+		EB75EAABAFBA88A3F9AF1F71 /* model_answer_cache.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = model_answer_cache.cpp; sourceTree = "<group>"; };
+		ECD98BF5AD5164A2DF84ADF1 /* kyrgyz.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = kyrgyz.hpp; sourceTree = "<group>"; };
+		EEB144903C375C65DEC6D09A /* PackSidecar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackSidecar.swift; sourceTree = "<group>"; };
+		EEBAE3520DCA2383F14C459B /* ini_parser.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ini_parser.hpp; sourceTree = "<group>"; };
+		EEDE08801736463ACCEE8188 /* Version.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Version.xcconfig; sourceTree = "<group>"; };
+		F0B18D5CDAB39E09F9E3B764 /* audio.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = audio.hpp; sourceTree = "<group>"; };
+		F0BCB398D9F56BEBDA2C9404 /* SampleQueue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SampleQueue.hpp; sourceTree = "<group>"; };
+		F10D4197EC64858D69C05852 /* hts_engine_pool.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = hts_engine_pool.hpp; sourceTree = "<group>"; };
+		F19C90D398FCA0414EA0CAEA /* georgian.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = georgian.cpp; sourceTree = "<group>"; };
+		F37ECAFD63710D04A74F5931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F394CA6E750F9587DDE6A2BC /* engine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = engine.cpp; sourceTree = "<group>"; };
+		F3A5730BE50BA694A6450577 /* voice-metadata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "voice-metadata.json"; sourceTree = "<group>"; };
+		F3AEFDB0704D1072A7740554 /* pitch.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = pitch.cpp; sourceTree = "<group>"; };
+		F3CBDD7CA6AB6D8CED871586 /* RHVoice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RHVoice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F44D10988CA773FA74D0AA32 /* hts_engine_call.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hts_engine_call.cpp; sourceTree = "<group>"; };
+		F682C44CDD404C3E1FC800C5 /* limiter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = limiter.cpp; sourceTree = "<group>"; };
+		F6A6150362F46DDADB1271C6 /* phoneme_set.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = phoneme_set.hpp; sourceTree = "<group>"; };
+		F76B8BF88BC07262F4A85C4F /* package_client.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = package_client.hpp; sourceTree = "<group>"; };
+		F9B9F23098A0A07C8E6155DC /* PackageIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageIndex.swift; sourceTree = "<group>"; };
+		FA1B8A0527C68D6868F45EDC /* VoiceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceRow.swift; sourceTree = "<group>"; };
+		FAE6993FF6E1C000409F8128 /* lts.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = lts.hpp; sourceTree = "<group>"; };
+		FB2F0A1229EB1D52689C531E /* event_logger.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = event_logger.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		750CDAAAC6215BB235435355 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B40D92BED863DB712DF3BFAB /* libRHVoiceCore.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		987460235512469D7CF0EC7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71B2151153D9C57FA5170826 /* libRHVoiceCore.a in Frameworks */,
+				40435F38DF619DDAD2834263 /* AVFAudio.framework in Frameworks */,
+				5BFCA9E62FB5CF2CCE484D11 /* AudioToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7AEF2BEDA954B37AC0E51EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFC633E66CB8B2AF55F875EA /* libRHVoiceCore.a in Frameworks */,
+				2B05EFD95734F6B8DD4F832E /* ZIPFoundation in Frameworks */,
+				E39167B3494E3AF3CF972474 /* AVFAudio.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1DA903CE7BD387245DA27A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3803B4C047F3732A66185CAC /* ZIPFoundation in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0AFA5B10B2C5412A82D148CF /* hts_engine */ = {
+			isa = PBXGroup;
+			children = (
+				90D3C570028A6929D8FE1587 /* HTS_audio.c */,
+				428C59E49CE9443F6CADCE10 /* HTS_engine.c */,
+				B1F1ADB54669A363B933DB7A /* HTS_gstream.c */,
+				C43FD52902F5D2A9ADE96BD0 /* HTS_label.c */,
+				9736D410DA45A8AD7A8CA78D /* HTS_misc.c */,
+				B326590BC69C0FC95849E08C /* HTS_model.c */,
+				A02DCEA8269D372054F1064B /* HTS_pstream.c */,
+				730FC039B8662547E14DDAA5 /* HTS_sstream.c */,
+				C341027550D4038B9E463294 /* HTS_vocoder.c */,
+			);
+			name = hts_engine;
+			path = hts_engine;
+			sourceTree = "<group>";
+		};
+		17968F17CA1AC3AE1AB3CA85 /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				4363BB2C99CFF4288058FBB5 /* build.sh */,
+				22C2B5F951B5C68B8440E38F /* capture-window.swift */,
+				6FECB6A74E968DBD518796E0 /* generate-voice-metadata.py */,
+				C073E5E89D43C4C4DBB870FD /* import-android-strings.py */,
+				069A2728E410BF72873C5287 /* list-voices.swift */,
+				72836B5D5AF13610C4CA830C /* notarize.sh */,
+				BAFA9D498C32653B1228CCD8 /* speak.swift */,
+				065012F9B627DA0A30F2F8DF /* voice-metadata.overrides.json */,
+			);
+			path = scripts;
+			sourceTree = "<group>";
+		};
+		26970E63E3A6325064FBE6C7 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				60484A663772BF469791D012 /* .gitignore */,
+				1DD7CC77D1F6F9D5A668B60B /* bpf.cpp */,
+				5FE3D3E2D5995C0AA5E09F32 /* brazilian_portuguese.cpp */,
+				E3CA1B19C1C3C8BBF049A3EE /* config.cpp */,
+				92A6B55190949D32F5D5D442 /* data_only_language.cpp */,
+				93CA9711F4BB34E713DB8F9F /* document.cpp */,
+				2366C08C4CFEC622FEF07BA5 /* dtree.cpp */,
+				7A157BDDE426F15148936239 /* emoji.cpp */,
+				F394CA6E750F9587DDE6A2BC /* engine.cpp */,
+				5C7639F44062B2C7680CC15B /* english_id.cpp */,
+				5F6279FD869E7E547E772EBE /* english.cpp */,
+				591D950CCB459C21022C529A /* equalizer.cpp */,
+				1D336D9120FA11CE5EC7730F /* esperanto.cpp */,
+				E693CEC4D8A0092A5FF74752 /* fst.cpp */,
+				F19C90D398FCA0414EA0CAEA /* georgian.cpp */,
+				F44D10988CA773FA74D0AA32 /* hts_engine_call.cpp */,
+				014DAFE51DD8D7A839C1E9A6 /* hts_engine_impl.cpp */,
+				C3EF1BA5223F62084534548A /* hts_label.cpp */,
+				C7F1CD70409865BAB6DF3354 /* hts_labeller.cpp */,
+				089CE2577A13E11FC2383B05 /* hts_vocoder_wrapper.cpp */,
+				A07562AA511BA4E58FB7A30F /* ini_parser.cpp */,
+				137E50544D03520E72240AA0 /* io.cpp */,
+				0D46ECA8472D9389016F5144 /* item.cpp */,
+				B52F3F63A6982AA22AE804C1 /* kyrgyz.cpp */,
+				837795161F67621DD512A245 /* language.cpp */,
+				F682C44CDD404C3E1FC800C5 /* limiter.cpp */,
+				6BDC60BAAE39218B9AE1493C /* lts.cpp */,
+				94FE325D4E43EEBCC31CB0B9 /* macedonian.cpp */,
+				EB75EAABAFBA88A3F9AF1F71 /* model_answer_cache.cpp */,
+				6BE2E8D77116DFDE92E3DD64 /* params.cpp */,
+				B7B257BA17A8F3DA69893313 /* path.cpp */,
+				68771A93745714335024CDDF /* phoneme_set.cpp */,
+				F3AEFDB0704D1072A7740554 /* pitch.cpp */,
+				3F9B2622F93735445A938E52 /* question_matcher.cpp */,
+				4822FC24A267C42BCB340EB1 /* relation.cpp */,
+				4D33A4C2D196BA09EE683913 /* russian.cpp */,
+				601BC776CA749F1DCB341A7E /* speech_processor.cpp */,
+				239539956018076B6A4FE4CD /* str_hts_engine_impl.cpp */,
+				B3392C5CBCF13CF2A09032BE /* tatar.cpp */,
+				487678D6CF2DA438E41628AA /* ukrainian.cpp */,
+				610ADAEF8D4E665CA6FA97B6 /* unicode.cpp */,
+				6A4524B1C4155CDC11B3DC60 /* unit_db.cpp */,
+				8D3A6A2000C9FFE12F8FB96B /* userdict.cpp */,
+				A14B61CB56E0908F44705575 /* utterance.cpp */,
+				C4875DA6684DF6034806D176 /* vietnamese.cpp */,
+				7C30873076C3CC1684881F6A /* voice.cpp */,
+			);
+			name = core;
+			path = core;
+			sourceTree = "<group>";
+		};
+		28E5270DDEE6D461BB80DDC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D609AF39DC69F591AB266ED /* AudioToolbox.framework */,
+				AE5A372F10255C9258D7AB91 /* AVFAudio.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		29FF7B023C61228EA886007B /* stb_vorbis */ = {
+			isa = PBXGroup;
+			children = (
+				B24C8F87FA314CCEB9148AB4 /* stb_vorbis_impl.c */,
+				D990427E4A7AD5527FCB9E90 /* stb_vorbis.h */,
+			);
+			path = stb_vorbis;
+			sourceTree = "<group>";
+		};
+		501F25CF005D750E37AA3406 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				9DAAE202034FF63B6A16AD42 /* test.cpp */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		551AEC20543F8B8A1B639FC6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6B4F9903A7D4D9FB32F6B225 /* Localizable.xcstrings */,
+				545A157C485C55DE91C49770 /* packages-fallback.json */,
+				F3A5730BE50BA694A6450577 /* voice-metadata.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		64163AB22302786818F76888 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				4AA1CED485E77B94049606B0 /* api.hpp */,
+				6450F250DA2D764D77F558E3 /* bpf.h */,
+				63BB5E5284D2F2E91B7E96B9 /* brazilian_portuguese.hpp */,
+				88302609AB796BB0F2A4A431 /* client.hpp */,
+				391C6AF52BC81FA99DD13A37 /* config.h.in */,
+				3C988FC4510CA8344F5B9F46 /* config.hpp */,
+				B1F81B7C232A34FED60E956E /* data_only_language.hpp */,
+				3A27F9367D1E37031F8DEB91 /* document.hpp */,
+				CF3B5D4CB687BD28EE7AB52B /* dtree.hpp */,
+				B6705A9B248ABFCEE0BD6AC1 /* emoji.hpp */,
+				44C4F367501648A08622559A /* engine.hpp */,
+				5B23FB4933654D53B6D1507A /* english_id.hpp */,
+				E677B3F1C7E79938AE1D520C /* english.hpp */,
+				ABAFB8C13173989C7EAC7A4D /* equalizer.hpp */,
+				722CE947891F04013C204D61 /* esperanto.hpp */,
+				FB2F0A1229EB1D52689C531E /* event_logger.hpp */,
+				D4D9801B46B3030821B333A1 /* events.hpp */,
+				C7870FD81930464ACDA89B75 /* exception.hpp */,
+				36D06AAC979F84D26C7721E3 /* fst.hpp */,
+				16AB6928FB8BA53D16729B5B /* georgian.hpp */,
+				AC089EA2F532DD1D6FA42676 /* hts_engine_call.hpp */,
+				1238D642B4D48F9042C2F283 /* hts_engine_impl.hpp */,
+				F10D4197EC64858D69C05852 /* hts_engine_pool.hpp */,
+				7A22D776B93E7B2A8B7E29B0 /* hts_input.hpp */,
+				3EE7B63C83A1D4CCA6FA2C53 /* hts_label.hpp */,
+				910567589F34A339642AE983 /* hts_labeller.hpp */,
+				1D7E3AF8B3A997DE83AD7581 /* hts_vocoder_wrapper.hpp */,
+				EEBAE3520DCA2383F14C459B /* ini_parser.hpp */,
+				755D1929F1504EB9D4B9F999 /* io.hpp */,
+				AE7C32D7AF889AA356EC4EEC /* item.hpp */,
+				ECD98BF5AD5164A2DF84ADF1 /* kyrgyz.hpp */,
+				3F7010CEBD61646CCF610728 /* language.hpp */,
+				91DB144257E00E04255E7314 /* limiter.hpp */,
+				FAE6993FF6E1C000409F8128 /* lts.hpp */,
+				C60B255693B6795FAD688C28 /* macedonian.hpp */,
+				440609C12A6C44118355C28A /* model_answer_cache.h */,
+				13FAD5607923E87C07BF15AF /* model_answer_cache.hpp */,
+				F76B8BF88BC07262F4A85C4F /* package_client.hpp */,
+				0D67ED2A87A31EE7538122D9 /* params.hpp */,
+				73DB99E753B1AFC7732FC8D8 /* path.hpp */,
+				F6A6150362F46DDADB1271C6 /* phoneme_set.hpp */,
+				8C46C56213839129D0298BF0 /* pitch.hpp */,
+				D86F51DCB5C01F4F6BD00A34 /* property.hpp */,
+				E83189D918E4954FC98604B8 /* quality_setting.hpp */,
+				124F6BFC6C30719FE1495931 /* question_matcher.h */,
+				C550BC45A3EEA0446AF85E0A /* relation.hpp */,
+				B2EA7AA6B49B5C475DE9E31A /* resource.hpp */,
+				3B4E7D097628AFC74FD55B91 /* rules.hpp */,
+				801B1D0824B6D082C20D6BCA /* russian.hpp */,
+				EA291AA3581861881DD97B27 /* sample_rate.hpp */,
+				3D44136E567C7F98FD9731FA /* speech_processing_chain.hpp */,
+				A6106E1E549A6DADC9BBED01 /* speech_processor.hpp */,
+				938A2A021F12D773BEE7DD40 /* ssml.hpp */,
+				A917828CE65ACDFBE3C267E6 /* str_hts_engine_impl.hpp */,
+				9D50D7E1195E8B743F4AEAEE /* str.hpp */,
+				748D92A10642F9A3A0B35EF5 /* stress_pattern.hpp */,
+				BB3BE75FC9592FCD13647FED /* tatar.hpp */,
+				E8327FE32AF48EBB3D7FA7E8 /* threading.hpp */,
+				C5444E6B821754FC03808EC9 /* tone.hpp */,
+				24AC453256DD7BCF499E381F /* trie.hpp */,
+				540EDD41AE66007F4620121D /* tts_markup.hpp */,
+				21DC36E7B54B0B1DB505ADB9 /* ukrainian.hpp */,
+				5F93BBAF63E1680E042CEC2E /* unicode.hpp */,
+				88031482EAF1C3C2B2A47219 /* unit_db.hpp */,
+				2FE02B56F1F3B6B47C4AE98C /* userdict.hpp */,
+				92110036B1718BB0C9EC620B /* utf.hpp */,
+				D1671CE7559D0558C7F66292 /* utterance.hpp */,
+				919AC767A65823874CD2156A /* value.hpp */,
+				7BC8DC71744F155797AEF2BC /* vietnamese.hpp */,
+				67717A63856D3D642ADEB8A2 /* voice_profile.hpp */,
+				907E8868D5594E82BB560B4A /* voice.hpp */,
+				11569418ACAC47A7C55D9833 /* xml.hpp */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		7B62DA4F4880340098302709 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0199693E38C612B4E0796718 /* libRHVoiceCore.a */,
+				F3CBDD7CA6AB6D8CED871586 /* RHVoice.app */,
+				6705138992C7EC4559D7F1FF /* RHVoiceCLI */,
+				510D692553745AD0C311F02B /* RHVoiceSynthesizer.appex */,
+				273D726346C82C4247B788AA /* RHVoiceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7C1CA6E022D5C2FC20057EEE /* RHVoiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				DAE23AD968486476E3BB6BD0 /* CatalogTests.swift */,
+				E22CF063731EB3C272EB5B63 /* DemoDecoderTests.swift */,
+				5302B757F0A972070DB9A65E /* DependencyResolverTests.swift */,
+				35C25EEABC859DFEF50A679C /* InstallIntegrationTests.swift */,
+				E022375BB8841D73A85E9CDC /* PackageExtractorTests.swift */,
+				7E2F701B12242B6953EFFE87 /* PackageIndexTests.swift */,
+				3199BFBF10CF4D577A678681 /* SSMLNormalizerTests.swift */,
+			);
+			path = RHVoiceTests;
+			sourceTree = "<group>";
+		};
+		7C7F6634358879032E903D8B /* RHVoice */ = {
+			isa = PBXGroup;
+			children = (
+				B38577B271D04835CCB26F33 /* Model */,
+				551AEC20543F8B8A1B639FC6 /* Resources */,
+				EBD2D6811688D5E221CE415E /* Views */,
+				F37ECAFD63710D04A74F5931 /* Info.plist */,
+				3FF2D3E922D61C33DB2CACC4 /* RHVoice-Bridging-Header.h */,
+				072A1203C827B847AABAE0C9 /* RHVoiceApp.swift */,
+			);
+			path = RHVoice;
+			sourceTree = "<group>";
+		};
+		A5A6B5E0967B042E24E43B7F /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				C6FDFCB3DF557D61A280CB15 /* App.xcconfig */,
+				37336F5E89C7C531FE30A718 /* CLI.xcconfig */,
+				855133225666947201A72C46 /* Core.xcconfig */,
+				6052A344035C89F4CAEE0818 /* CoreHeaders.xcconfig */,
+				76427F5CE19FA9BD05385A18 /* Extension.xcconfig */,
+				BC7DE8A060ECFE224467D89C /* Local.xcconfig */,
+				0C7886F09A66F5139DECE7ED /* Local.xcconfig.template */,
+				2D73AD11E7CD2CD7B845AE64 /* RHVoice.entitlements */,
+				AF2CDB2212AB3A961DDF2C06 /* RHVoiceSynthesizer.entitlements */,
+				B12C0A946D87ACC502E2915D /* Shared.xcconfig */,
+				EEDE08801736463ACCEE8188 /* Version.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		A7C0A4E2F9A48E4F99375132 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				B7EA421EEF177694D64FEECD /* audio.cpp */,
+				A29B096458AF7F2EB9E9B035 /* file_playback_stream_impl.cpp */,
+				A7EF3D34A14B8779DDD91517 /* playback_stream.cpp */,
+			);
+			path = audio;
+			sourceTree = "<group>";
+		};
+		AE70FEA9453BBDF4847F5035 = {
+			isa = PBXGroup;
+			children = (
+				A5A6B5E0967B042E24E43B7F /* Config */,
+				7C7F6634358879032E903D8B /* RHVoice */,
+				BF735E1BF8D92BBC0BCFA8AF /* RHVoiceCore */,
+				C110DEB33193E5F134D562DA /* RHVoiceSynthesizer */,
+				7C1CA6E022D5C2FC20057EEE /* RHVoiceTests */,
+				17968F17CA1AC3AE1AB3CA85 /* scripts */,
+				C438C9B8B56694FA075108C3 /* Shared */,
+				ED4C95B7572EBF1F859CFB8D /* src */,
+				CD135760C8B797B5D25FBE26 /* ThirdParty */,
+				28E5270DDEE6D461BB80DDC9 /* Frameworks */,
+				7B62DA4F4880340098302709 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AEC634645DC5590988F43926 /* Bridge headers */ = {
+			isa = PBXGroup;
+			children = (
+				A721D6C796751F1590D76B6F /* OSLogger.hpp */,
+				22EF4781418A9949909C44B6 /* RHVEngine.h */,
+				19A530F14AFB413FA07E749A /* RHVEngine.mm */,
+				E201F0E1FD101D1CA7A4064B /* RHVoiceBridge.h */,
+				BAAED9C9908A830E6B83D69E /* RHVSynthesisSession.h */,
+				F0BCB398D9F56BEBDA2C9404 /* SampleQueue.hpp */,
+				AD1A13F2A8881B72768CC5EB /* SpeechSink.hpp */,
+				9A68B535FE318FF9D733DA84 /* SpeechSink.mm */,
+				E2373EA97EE063131001EA98 /* SSMLNormalizer.cpp */,
+				035D58F0ED6487ED8456B972 /* SSMLNormalizer.hpp */,
+			);
+			name = "Bridge headers";
+			path = Bridge;
+			sourceTree = "<group>";
+		};
+		B38577B271D04835CCB26F33 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3563F847DC286C809CAB2416 /* AppModel.swift */,
+				135E60583135BBD33A724DF2 /* DemoDecoder.swift */,
+				058857D45605178573B046E0 /* DependencyResolver.swift */,
+				98C7BC168A7698C027F838C5 /* IndexRepository.swift */,
+				4BCB071F93CB18079ADBB91E /* OggVorbisDecoder.swift */,
+				9AE8A93FB8651036188F83C3 /* PackageDownloader.swift */,
+				4F717956168E97B14F57906D /* PackageExtractor.swift */,
+				F9B9F23098A0A07C8E6155DC /* PackageIndex.swift */,
+				115C55A3D440C9633A8DB184 /* SamplePlayer.swift */,
+				E01616B23C057876F0D251C2 /* SpeechRegistration.swift */,
+				C83A3ABADA6800F2E32AF3A0 /* VoiceMetadataStore.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BF735E1BF8D92BBC0BCFA8AF /* RHVoiceCore */ = {
+			isa = PBXGroup;
+			children = (
+				AEC634645DC5590988F43926 /* Bridge headers */,
+				ECDA75AD4F4021FE310D0166 /* include */,
+			);
+			path = RHVoiceCore;
+			sourceTree = "<group>";
+		};
+		C110DEB33193E5F134D562DA /* RHVoiceSynthesizer */ = {
+			isa = PBXGroup;
+			children = (
+				421F77E0611A6CC45228C204 /* AudioUnitFactory.swift */,
+				2BAC15F38DF07B72D14D13F3 /* Info.plist */,
+				EB72532303501C8EFFB108DE /* MarkerMapper.swift */,
+				659A9C389259D870EDE24BC5 /* RHVoiceAudioUnit.swift */,
+				1C5C7F1E63852284158BD233 /* RHVoiceSynthesizer-Bridging-Header.h */,
+			);
+			path = RHVoiceSynthesizer;
+			sourceTree = "<group>";
+		};
+		C438C9B8B56694FA075108C3 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				9D4DC49EF77AD7348A991EAF /* AppGroup.swift */,
+				238A3BF44D1A30DB21855AD9 /* DataLayout.swift */,
+				2A1DC08E43A923E1B54869C1 /* EngineHolder.swift */,
+				50174E6D08A9F1FC33BB12BB /* InfoFile.swift */,
+				4B6C6F2386498399C013C903 /* LocaleMapping.swift */,
+				D1DE29D97C0BFB3E35B032F8 /* Log.swift */,
+				EEB144903C375C65DEC6D09A /* PackSidecar.swift */,
+				36E7C8FC39B262F0F8A7C478 /* SharedPreferences.swift */,
+				0BC5506EC2ECD23CBB7B9930 /* VoiceCatalog.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		CD135760C8B797B5D25FBE26 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				29FF7B023C61228EA886007B /* stb_vorbis */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		EBD2D6811688D5E221CE415E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				33D1AAC0AB41A23375382FAD /* ContentView.swift */,
+				2BA3DF6CB55C720186CC83B8 /* LanguageSidebar.swift */,
+				C1A1E686D55E5AAC6076BEED /* SettingsView.swift */,
+				8A6FA9173E31C8D8124A129E /* StatusBar.swift */,
+				27040E2CAB84C76E481ABC00 /* VoiceListView.swift */,
+				FA1B8A0527C68D6868F45EDC /* VoiceRow.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ECDA75AD4F4021FE310D0166 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				C521ED49019B1366B427333B /* config.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		ED4C95B7572EBF1F859CFB8D /* src */ = {
+			isa = PBXGroup;
+			children = (
+				A7C0A4E2F9A48E4F99375132 /* audio */,
+				26970E63E3A6325064FBE6C7 /* core */,
+				0AFA5B10B2C5412A82D148CF /* hts_engine */,
+				EF568BCFB2FE492BB78EF47A /* include */,
+				501F25CF005D750E37AA3406 /* test */,
+			);
+			name = src;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		EF568BCFB2FE492BB78EF47A /* include */ = {
+			isa = PBXGroup;
+			children = (
+				64163AB22302786818F76888 /* core */,
+				F0B18D5CDAB39E09F9E3B764 /* audio.hpp */,
+				208DA643D4D9AE7959324412 /* RHVoice_common.h */,
+				893FA7495AB40FD2CFE5306B /* RHVoice.h */,
+				9589E9B05B27427D44B08583 /* SConscript */,
+			);
+			name = include;
+			path = include;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04A0D5C18F51332CF3E09058 /* RHVoiceCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2513EF237EE2FAF60B4A192 /* Build configuration list for PBXNativeTarget "RHVoiceCore" */;
+			buildPhases = (
+				0FCC9608596A69EC553DD485 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RHVoiceCore;
+			packageProductDependencies = (
+			);
+			productName = RHVoiceCore;
+			productReference = 0199693E38C612B4E0796718 /* libRHVoiceCore.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		2DA6FEB2C7673672EC01C009 /* RHVoiceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51DC3BE509EFD143FC91FA0F /* Build configuration list for PBXNativeTarget "RHVoiceTests" */;
+			buildPhases = (
+				A0E2A44162E980169194751F /* Sources */,
+				F1DA903CE7BD387245DA27A6 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1021E4F1DC8AE757CD73BD7A /* PBXTargetDependency */,
+			);
+			name = RHVoiceTests;
+			packageProductDependencies = (
+				C2C28A25B3942F322BA70326 /* ZIPFoundation */,
+			);
+			productName = RHVoiceTests;
+			productReference = 273D726346C82C4247B788AA /* RHVoiceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3B9F1E29DE35B985BD47C5A6 /* RHVoiceSynthesizer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0EFA4CFF51ED2D7C458A217E /* Build configuration list for PBXNativeTarget "RHVoiceSynthesizer" */;
+			buildPhases = (
+				739A8B3C1D349942C589134F /* Sources */,
+				987460235512469D7CF0EC7F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5AB66701D022D38F83F3F3D8 /* PBXTargetDependency */,
+			);
+			name = RHVoiceSynthesizer;
+			packageProductDependencies = (
+			);
+			productName = RHVoiceSynthesizer;
+			productReference = 510D692553745AD0C311F02B /* RHVoiceSynthesizer.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		59518DBCB30BF078E8FAAA92 /* RHVoiceCLI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FCB37C5245C65CAFD80B33A /* Build configuration list for PBXNativeTarget "RHVoiceCLI" */;
+			buildPhases = (
+				ACC9B3DFEE95ACDCE9857E08 /* Sources */,
+				750CDAAAC6215BB235435355 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B2442838525B01D2ABB1A05 /* PBXTargetDependency */,
+			);
+			name = RHVoiceCLI;
+			packageProductDependencies = (
+			);
+			productName = RHVoiceCLI;
+			productReference = 6705138992C7EC4559D7F1FF /* RHVoiceCLI */;
+			productType = "com.apple.product-type.tool";
+		};
+		AF0DD303379F0CA7A6D8D09A /* RHVoice */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4860903ABF7CDF01E468B54C /* Build configuration list for PBXNativeTarget "RHVoice" */;
+			buildPhases = (
+				A3E779DD1A77C715FF00B833 /* Sources */,
+				9D423A71A8354B4AC9FFB867 /* Resources */,
+				D7AEF2BEDA954B37AC0E51EA /* Frameworks */,
+				F043C974C0E38A600E1E9AED /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				78D0134E75F03080E2929507 /* PBXTargetDependency */,
+				4898FFD4AF7926DC227AD59C /* PBXTargetDependency */,
+			);
+			name = RHVoice;
+			packageProductDependencies = (
+				768D89A826F1B214E9137C6E /* ZIPFoundation */,
+			);
+			productName = RHVoice;
+			productReference = F3CBDD7CA6AB6D8CED871586 /* RHVoice.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FF7FBD399A43915E1A5BF654 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					04A0D5C18F51332CF3E09058 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+					2DA6FEB2C7673672EC01C009 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+					3B9F1E29DE35B985BD47C5A6 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+					59518DBCB30BF078E8FAAA92 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+					AF0DD303379F0CA7A6D8D09A = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 0078A57476464E2AC7FF5A9F /* Build configuration list for PBXProject "RHVoice" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				be,
+				ca,
+				cs,
+				en,
+				eo,
+				es,
+				fi,
+				hr,
+				hu,
+				ky,
+				mk,
+				pl,
+				pt,
+				ro,
+				ru,
+				sk,
+				sq,
+				sr,
+				uk,
+				uz,
+			);
+			mainGroup = AE70FEA9453BBDF4847F5035;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				C15EB6E09619635EF172DF74 /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 7B62DA4F4880340098302709 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04A0D5C18F51332CF3E09058 /* RHVoiceCore */,
+				3B9F1E29DE35B985BD47C5A6 /* RHVoiceSynthesizer */,
+				AF0DD303379F0CA7A6D8D09A /* RHVoice */,
+				2DA6FEB2C7673672EC01C009 /* RHVoiceTests */,
+				59518DBCB30BF078E8FAAA92 /* RHVoiceCLI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9D423A71A8354B4AC9FFB867 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E29876779CE59EAD38D244E /* Localizable.xcstrings in Resources */,
+				991B9F9FE0A5FEE6018193E8 /* packages-fallback.json in Resources */,
+				D702370D1AE9F361C4C4089D /* voice-metadata.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0FCC9608596A69EC553DD485 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6222858254DFDD1D932355DA /* HTS_audio.c in Sources */,
+				8B00D1F79CC1864740DECE31 /* HTS_engine.c in Sources */,
+				20EEA566FE7E6D9BA1C930E5 /* HTS_gstream.c in Sources */,
+				C505027E0678946F84A17815 /* HTS_label.c in Sources */,
+				760848999B2EA7E2B087BA80 /* HTS_misc.c in Sources */,
+				2D3BC228D1E1D2318CEBC112 /* HTS_model.c in Sources */,
+				51391D3320D97C94A45C5E38 /* HTS_pstream.c in Sources */,
+				BEE85E980054707F06F538F3 /* HTS_sstream.c in Sources */,
+				F9521602FBE2BD6E95FADD96 /* HTS_vocoder.c in Sources */,
+				296EC09C505C434AB7B7E100 /* RHVEngine.mm in Sources */,
+				83702FF88454812BA4FB0883 /* SSMLNormalizer.cpp in Sources */,
+				22D0F2872B41B00D13C6A46A /* SpeechSink.mm in Sources */,
+				8DC99BD882BBCC909707CE50 /* bpf.cpp in Sources */,
+				DA02917965C2F4DB52A6873B /* brazilian_portuguese.cpp in Sources */,
+				9A00D7BE1F8AEAE6B7FD72E4 /* config.cpp in Sources */,
+				A2A77C3F43CAA19C4593F6EA /* data_only_language.cpp in Sources */,
+				5009E20D1DA250F4326129CE /* document.cpp in Sources */,
+				EBB0F7BD31347BAE08F3F37A /* dtree.cpp in Sources */,
+				6C301DDA528457DF42B1F5F2 /* emoji.cpp in Sources */,
+				DC371A6437000A315ED1141D /* engine.cpp in Sources */,
+				C6090FD4D0E59031F2C89AFA /* english.cpp in Sources */,
+				749E51C7EC246DD6BD22958E /* english_id.cpp in Sources */,
+				7E827554F5AC4072FCF17453 /* equalizer.cpp in Sources */,
+				3F7D4886BE93BF3829B44988 /* esperanto.cpp in Sources */,
+				EFCCD53EE5811AA760838E83 /* fst.cpp in Sources */,
+				6141CE2DC66294261E840863 /* georgian.cpp in Sources */,
+				8DB2B4FAA4713E8C5E952390 /* hts_engine_call.cpp in Sources */,
+				57E2A8C53872A6E4B993F8F0 /* hts_engine_impl.cpp in Sources */,
+				0257B58B1F0CD092CCF374F2 /* hts_label.cpp in Sources */,
+				09B97E3C5020A3E4FFAC82D2 /* hts_labeller.cpp in Sources */,
+				C914BB8625E94F9B2319A56F /* hts_vocoder_wrapper.cpp in Sources */,
+				C004AD962E5B5FA1ED2E9BB3 /* ini_parser.cpp in Sources */,
+				77DDE7462D75C8B025B970C2 /* io.cpp in Sources */,
+				4B8832603F22BF01F1A975BE /* item.cpp in Sources */,
+				F2DF1F775250AADF497F1EDC /* kyrgyz.cpp in Sources */,
+				F5D831DE5E5FB81D9E0822D4 /* language.cpp in Sources */,
+				B37F2487038FF6366183B000 /* limiter.cpp in Sources */,
+				E42E792241BBB018240B1E5F /* lts.cpp in Sources */,
+				46441FC6CDE9D9D9FEA9E5CA /* macedonian.cpp in Sources */,
+				A6D3A477753C77AA8921CEF5 /* model_answer_cache.cpp in Sources */,
+				6BCBA992E7821E9768D10E48 /* params.cpp in Sources */,
+				4D7D17D83B26D8020DD0D6D0 /* path.cpp in Sources */,
+				D5F1BD31B53ABE0C11E825E0 /* phoneme_set.cpp in Sources */,
+				E00FC096618C8D13DCEBB01C /* pitch.cpp in Sources */,
+				1932B02A21A591B21F88AA0E /* question_matcher.cpp in Sources */,
+				15460D7E1119A25587E3531D /* relation.cpp in Sources */,
+				E656FCD99E5A2283D69AEDAE /* russian.cpp in Sources */,
+				BA2348688AF8ECABFD7D1728 /* speech_processor.cpp in Sources */,
+				B5A9F0E825E69D76B4C3A4D8 /* str_hts_engine_impl.cpp in Sources */,
+				C458AAF6F4FF500558DEA366 /* tatar.cpp in Sources */,
+				CD09D5A5874F9ABA7812C969 /* ukrainian.cpp in Sources */,
+				0DDD334E1E61E39C12ED1ECC /* unicode.cpp in Sources */,
+				7EFF954C3F4063B375FCC158 /* unit_db.cpp in Sources */,
+				1A18BDC82D91AD355E5C151D /* userdict.cpp in Sources */,
+				A6FA6E09FB5E23B5F689C377 /* utterance.cpp in Sources */,
+				2D64CD22CA433A021BB84482 /* vietnamese.cpp in Sources */,
+				C2465C3BEA0DF75312307F2D /* voice.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		739A8B3C1D349942C589134F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B30E9DBEE64B28DF610D389 /* AppGroup.swift in Sources */,
+				383D1A799A97C255955FDD6C /* AudioUnitFactory.swift in Sources */,
+				6ADCAFA5F113A8E73192B8AC /* DataLayout.swift in Sources */,
+				E96A999A18529485D9B06161 /* EngineHolder.swift in Sources */,
+				570264FFD72C308D7821A239 /* InfoFile.swift in Sources */,
+				4CD2CA8F94A0708C2F6BAC84 /* LocaleMapping.swift in Sources */,
+				FDD73E9D23065B6A2685C543 /* Log.swift in Sources */,
+				0E90CB5E31315D52DB0132D9 /* MarkerMapper.swift in Sources */,
+				73591C2BCC5083538093423F /* PackSidecar.swift in Sources */,
+				B944727E3D86469A5FB7FE0D /* RHVoiceAudioUnit.swift in Sources */,
+				1BD82127A7D97AFB8A6E9E81 /* SharedPreferences.swift in Sources */,
+				01F00EC2D4D363CC52CE54BC /* VoiceCatalog.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0E2A44162E980169194751F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53163C7D06E5D5318233FF31 /* CatalogTests.swift in Sources */,
+				06E3B27447DB6E399A4B7433 /* DemoDecoderTests.swift in Sources */,
+				89CBA3B42A052D4B570E2802 /* DependencyResolverTests.swift in Sources */,
+				8C1B3A4AE09B34B577970602 /* InstallIntegrationTests.swift in Sources */,
+				A2395B120833247A8DE4CFFA /* PackageExtractorTests.swift in Sources */,
+				37B04ABDD4F7D37B3BB64766 /* PackageIndexTests.swift in Sources */,
+				04651C118513AD278969376B /* SSMLNormalizerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3E779DD1A77C715FF00B833 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C58D2ABAD33602AEA595623 /* AppGroup.swift in Sources */,
+				A91466D01B134321BF1C5E7B /* AppModel.swift in Sources */,
+				D9606FEB98B597BFE8A41DC6 /* ContentView.swift in Sources */,
+				08AAD601E52B5B0CDF46239B /* DataLayout.swift in Sources */,
+				F21D07FBB25B77463E6349C2 /* DemoDecoder.swift in Sources */,
+				B45670131C0BC4D469F878A9 /* DependencyResolver.swift in Sources */,
+				1C73894FB99C1827A00F3E4B /* EngineHolder.swift in Sources */,
+				5B08932205C2193CFE345AAE /* IndexRepository.swift in Sources */,
+				E775636733C3F54371EA0605 /* InfoFile.swift in Sources */,
+				B999331832EE9749CEC61EAA /* LanguageSidebar.swift in Sources */,
+				63D6292C5CF6E3C1FCFD4A0F /* LocaleMapping.swift in Sources */,
+				136980802B91BFFAFDB6EE54 /* Log.swift in Sources */,
+				0B9A301B393623F1F593E08F /* OggVorbisDecoder.swift in Sources */,
+				AC780FB7D834C852ABE2D122 /* PackSidecar.swift in Sources */,
+				AF8C864E74E7B27FA794EDB4 /* PackageDownloader.swift in Sources */,
+				FE06A34D92AA0F937341471D /* PackageExtractor.swift in Sources */,
+				147ACE2942DCA315B3777831 /* PackageIndex.swift in Sources */,
+				94DE429BAAD8A85776D996F0 /* RHVoiceApp.swift in Sources */,
+				2E39A5E5DFEDC219393464C0 /* SamplePlayer.swift in Sources */,
+				BD87AF19FE73634340FF0151 /* SettingsView.swift in Sources */,
+				404E07C5D8D4D2338A888E30 /* SharedPreferences.swift in Sources */,
+				D962D5819A8F6E1E503387A0 /* SpeechRegistration.swift in Sources */,
+				AF61CE0A7D61AA737EEB8051 /* StatusBar.swift in Sources */,
+				574AD81D49E9846ADB9DEB91 /* VoiceCatalog.swift in Sources */,
+				CBC994FF443DA627F4442359 /* VoiceListView.swift in Sources */,
+				3B3CF73A030AED80076D660C /* VoiceMetadataStore.swift in Sources */,
+				EE4AE3D7AC723C31EB7B8DC9 /* VoiceRow.swift in Sources */,
+				B3ACD6E58974B68C71EB7935 /* stb_vorbis_impl.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACC9B3DFEE95ACDCE9857E08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A4F37E9FE4DCDAA5CE37C22 /* audio.cpp in Sources */,
+				C6B9B241B2C1DD8F74439A94 /* file_playback_stream_impl.cpp in Sources */,
+				D31A58BA8D1526C5026A12FC /* playback_stream.cpp in Sources */,
+				6A4EC1F9198B1EF7A4436D71 /* test.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1021E4F1DC8AE757CD73BD7A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF0DD303379F0CA7A6D8D09A /* RHVoice */;
+			targetProxy = DC323E1C5D788E1229DA9A77 /* PBXContainerItemProxy */;
+		};
+		4898FFD4AF7926DC227AD59C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04A0D5C18F51332CF3E09058 /* RHVoiceCore */;
+			targetProxy = 572FDC9A3EF15D226B54BD70 /* PBXContainerItemProxy */;
+		};
+		5AB66701D022D38F83F3F3D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04A0D5C18F51332CF3E09058 /* RHVoiceCore */;
+			targetProxy = 252F1A5328B1743F0ED92F52 /* PBXContainerItemProxy */;
+		};
+		78D0134E75F03080E2929507 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B9F1E29DE35B985BD47C5A6 /* RHVoiceSynthesizer */;
+			targetProxy = 3A5F2A08B2EF1E39F516E37E /* PBXContainerItemProxy */;
+		};
+		9B2442838525B01D2ABB1A05 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04A0D5C18F51332CF3E09058 /* RHVoiceCore */;
+			targetProxy = 91D2B89E1FB7B9D4967B7430 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		030F3ACB0441279FC3B356BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37336F5E89C7C531FE30A718 /* CLI.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.rhvoice.RHVoiceCLI;
+			};
+			name = Release;
+		};
+		179D9B5DAF053A01DFA79B3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6FDFCB3DF557D61A280CB15 /* App.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Config/RHVoice.entitlements;
+				INFOPLIST_FILE = RHVoice/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+			};
+			name = Debug;
+		};
+		2B212CC681B79CE46F616CB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B12C0A946D87ACC502E2915D /* Shared.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3707B870CAC357976F140EDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 855133225666947201A72C46 /* Core.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.rhvoice.RHVoiceCore;
+			};
+			name = Release;
+		};
+		3A7C06F10512CE24847EB975 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/RHVoiceCore/Bridge $(SRCROOT)/ThirdParty/stb_vorbis";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(RHVOICE_BUNDLE_PREFIX).RHVoiceTests";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/RHVoice/RHVoice-Bridging-Header.h";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RHVoice.app/Contents/MacOS/RHVoice";
+			};
+			name = Release;
+		};
+		49E41FD0A1CD9834C5526BBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76427F5CE19FA9BD05385A18 /* Extension.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Config/RHVoiceSynthesizer.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = RHVoiceSynthesizer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+			};
+			name = Debug;
+		};
+		8A2DE0547FD75072647BC568 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37336F5E89C7C531FE30A718 /* CLI.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.rhvoice.RHVoiceCLI;
+			};
+			name = Debug;
+		};
+		8A912CD7512B79408BCA08B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76427F5CE19FA9BD05385A18 /* Extension.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Config/RHVoiceSynthesizer.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = RHVoiceSynthesizer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+			};
+			name = Release;
+		};
+		951736DCC16C7429F6D01A16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/RHVoiceCore/Bridge $(SRCROOT)/ThirdParty/stb_vorbis";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(RHVOICE_BUNDLE_PREFIX).RHVoiceTests";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/RHVoice/RHVoice-Bridging-Header.h";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RHVoice.app/Contents/MacOS/RHVoice";
+			};
+			name = Debug;
+		};
+		9F5F56FFEE169CB069A238DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 855133225666947201A72C46 /* Core.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.rhvoice.RHVoiceCore;
+			};
+			name = Debug;
+		};
+		A1127B8FACD63696F6C99508 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B12C0A946D87ACC502E2915D /* Shared.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		EABF12218801625AA3054790 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6FDFCB3DF557D61A280CB15 /* App.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Config/RHVoice.entitlements;
+				INFOPLIST_FILE = RHVoice/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0078A57476464E2AC7FF5A9F /* Build configuration list for PBXProject "RHVoice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B212CC681B79CE46F616CB9 /* Debug */,
+				A1127B8FACD63696F6C99508 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0EFA4CFF51ED2D7C458A217E /* Build configuration list for PBXNativeTarget "RHVoiceSynthesizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49E41FD0A1CD9834C5526BBC /* Debug */,
+				8A912CD7512B79408BCA08B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4860903ABF7CDF01E468B54C /* Build configuration list for PBXNativeTarget "RHVoice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				179D9B5DAF053A01DFA79B3A /* Debug */,
+				EABF12218801625AA3054790 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51DC3BE509EFD143FC91FA0F /* Build configuration list for PBXNativeTarget "RHVoiceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				951736DCC16C7429F6D01A16 /* Debug */,
+				3A7C06F10512CE24847EB975 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6FCB37C5245C65CAFD80B33A /* Build configuration list for PBXNativeTarget "RHVoiceCLI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A2DE0547FD75072647BC568 /* Debug */,
+				030F3ACB0441279FC3B356BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2513EF237EE2FAF60B4A192 /* Build configuration list for PBXNativeTarget "RHVoiceCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F5F56FFEE169CB069A238DB /* Debug */,
+				3707B870CAC357976F140EDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C15EB6E09619635EF172DF74 /* XCRemoteSwiftPackageReference "ZIPFoundation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/weichsel/ZIPFoundation";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.19;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		768D89A826F1B214E9137C6E /* ZIPFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C15EB6E09619635EF172DF74 /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
+			productName = ZIPFoundation;
+		};
+		C2C28A25B3942F322BA70326 /* ZIPFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C15EB6E09619635EF172DF74 /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
+			productName = ZIPFoundation;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = FF7FBD399A43915E1A5BF654 /* Project object */;
+}

@@ -1,0 +1,209 @@
+# XcodeGen specification for the macOS port. RHVoice.xcodeproj is generated from this file:
+#   brew install xcodegen && xcodegen generate
+# (scripts/build.sh does this automatically when project.yml is newer than the project.)
+name: RHVoice
+
+options:
+  bundleIdPrefix: org.rhvoice
+  deploymentTarget:
+    macOS: "13.0"
+  createIntermediateGroups: true
+  generateEmptyDirectories: false
+  groupSortPosition: top
+  defaultConfig: Release
+
+configs:
+  Debug: debug
+  Release: release
+
+configFiles:
+  Debug: Config/Shared.xcconfig
+  Release: Config/Shared.xcconfig
+
+packages:
+  ZIPFoundation:
+    url: https://github.com/weichsel/ZIPFoundation
+    from: 0.9.19
+
+fileGroups:
+  - Config
+  - scripts
+
+targets:
+  # The engine: src/core + src/hts_engine compiled as one static library (C++14), plus the
+  # Objective-C++ bridge in RHVoiceCore/Bridge. The source list mirrors src/core/SConscript
+  # and src/hts_engine/SConscript.
+  RHVoiceCore:
+    type: library.static
+    platform: macOS
+    configFiles:
+      Debug: Config/Core.xcconfig
+      Release: Config/Core.xcconfig
+    sources:
+      - path: ../core
+        name: core
+        excludes:
+          - "*.h"
+          - "*.hpp"
+          - "unidata.cpp"          # included by unicode.cpp
+          - "emoji_data.cpp"       # included by emoji.cpp
+          - "userdict_parser.c"    # included by userdict.cpp
+          - "userdict_parser.g"
+          - "config.h.in"
+          - "CMakeLists.txt"
+          - "SConscript"
+      - path: ../hts_engine
+        name: hts_engine
+        excludes:
+          - "*.h"
+          - "CMakeLists.txt"
+          - "SConscript"
+      - path: ../include
+        name: include
+        buildPhase: none
+      - path: RHVoiceCore/include
+        buildPhase: none
+      - path: RHVoiceCore/Bridge
+        excludes:
+          - "*.h"
+          - "*.hpp"
+      - path: RHVoiceCore/Bridge
+        name: Bridge headers
+        includes:
+          - "*.h"
+          - "*.hpp"
+        buildPhase: none
+
+  # The Audio Unit app extension (AVSpeechSynthesisProviderAudioUnit) that provides the
+  # installed voices to VoiceOver and every other speech client.
+  RHVoiceSynthesizer:
+    type: app-extension
+    platform: macOS
+    configFiles:
+      Debug: Config/Extension.xcconfig
+      Release: Config/Extension.xcconfig
+    sources:
+      - path: RHVoiceSynthesizer
+      - path: Shared
+    dependencies:
+      - target: RHVoiceCore
+      - sdk: AVFAudio.framework
+      - sdk: AudioToolbox.framework
+    info:
+      path: RHVoiceSynthesizer/Info.plist
+      properties:
+        CFBundleDisplayName: RHVoice Synthesizer
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        NSHumanReadableCopyright: RHVoice contributors. Licensed under the LGPL 2.1 or later.
+        RHVAppGroupIdentifier: $(APP_GROUP_ID)
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.AudioUnit
+          NSExtensionPrincipalClass: $(PRODUCT_MODULE_NAME).AudioUnitFactory
+          NSExtensionAttributes:
+            AudioComponents:
+              - type: ausp
+                subtype: rhvc
+                manufacturer: RHVo
+                name: "RHVoice: RHVoice"
+                description: RHVoice speech synthesizer
+                version: 70402     # 1.19.2 as (major << 16) | (minor << 8) | patch
+                sandboxSafe: true
+                tags:
+                  - Speech Synthesizer
+    entitlements:
+      path: Config/RHVoiceSynthesizer.entitlements
+      properties:
+        com.apple.security.app-sandbox: true
+        com.apple.security.application-groups:
+          - $(APP_GROUP_ID)
+
+  # The host application: voice manager UI. Embeds the extension.
+  RHVoice:
+    type: application
+    platform: macOS
+    configFiles:
+      Debug: Config/App.xcconfig
+      Release: Config/App.xcconfig
+    sources:
+      - path: RHVoice
+      - path: Shared
+      - path: ThirdParty/stb_vorbis
+        excludes:
+          - "stb_vorbis.c"   # included by stb_vorbis_impl.c and stb_vorbis.h
+          - "README.md"
+    dependencies:
+      - target: RHVoiceSynthesizer
+      - target: RHVoiceCore
+      - package: ZIPFoundation
+      - sdk: AVFAudio.framework
+    info:
+      path: RHVoice/Info.plist
+      properties:
+        CFBundleDisplayName: RHVoice
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        LSApplicationCategoryType: public.app-category.utilities
+        LSMinimumSystemVersion: $(MACOSX_DEPLOYMENT_TARGET)
+        NSHumanReadableCopyright: RHVoice contributors. Licensed under the LGPL 2.1 or later.
+        RHVAppGroupIdentifier: $(APP_GROUP_ID)
+    entitlements:
+      path: Config/RHVoice.entitlements
+      properties:
+        com.apple.security.app-sandbox: true
+        com.apple.security.application-groups:
+          - $(APP_GROUP_ID)
+        com.apple.security.network.client: true
+        com.apple.security.files.user-selected.read-write: true
+
+  RHVoiceTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - path: RHVoiceTests
+    dependencies:
+      - target: RHVoice
+      - package: ZIPFoundation
+    settings:
+      base:
+        SWIFT_OBJC_BRIDGING_HEADER: $(SRCROOT)/RHVoice/RHVoice-Bridging-Header.h
+        HEADER_SEARCH_PATHS: $(inherited) $(SRCROOT)/RHVoiceCore/Bridge $(SRCROOT)/ThirdParty/stb_vorbis
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: $(RHVOICE_BUNDLE_PREFIX).RHVoiceTests
+
+  # Upstream RHVoice-test (src/test/test.cpp) with the file audio backend: writes WAV files.
+  # Development/CI smoke test only.
+  RHVoiceCLI:
+    type: tool
+    platform: macOS
+    configFiles:
+      Debug: Config/CLI.xcconfig
+      Release: Config/CLI.xcconfig
+    sources:
+      - path: ../test/test.cpp
+      - path: ../audio/audio.cpp
+      - path: ../audio/file_playback_stream_impl.cpp
+      - path: ../audio/playback_stream.cpp
+    dependencies:
+      - target: RHVoiceCore
+
+schemes:
+  RHVoice:
+    build:
+      targets:
+        RHVoice: all
+        RHVoiceTests: [test]
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - RHVoiceTests
+    archive:
+      config: Release
+  RHVoiceCLI:
+    build:
+      targets:
+        RHVoiceCLI: all
+    run:
+      config: Release

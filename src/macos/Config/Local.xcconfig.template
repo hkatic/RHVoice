@@ -1,0 +1,15 @@
+// Copy this file to Local.xcconfig (gitignored) and fill in your values.
+// Everything here overrides Shared.xcconfig.
+
+// Your Apple Developer Team ID (10 characters). Required for a team-prefixed app group,
+// which macOS 15 and later expect. Leave the defaults below for ad-hoc local builds.
+//DEVELOPMENT_TEAM = ABCDE12345
+//CODE_SIGN_IDENTITY = Apple Development
+//CODE_SIGN_STYLE = Automatic
+
+// App group shared by the app and the synthesizer extension. With a team, prefix it
+// with the team identifier; without one, macOS shows a one-time consent prompt.
+//APP_GROUP_ID = $(TeamIdentifierPrefix)org.rhvoice.RHVoice
+
+// Bundle identifier prefix, if you cannot use org.rhvoice with your team.
+//RHVOICE_BUNDLE_PREFIX = com.example

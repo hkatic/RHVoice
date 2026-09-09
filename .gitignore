@@ -5,3 +5,8 @@ local/
 /CMakeLists.txt.user
 external/libs/boost/include/boost/
 
+# macOS port (src/macos)
+src/macos/Config/Local.xcconfig
+src/macos/build/
+**/xcuserdata/
+.DS_Store

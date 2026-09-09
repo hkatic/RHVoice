@@ -1,0 +1,12 @@
+// rhvoice-cli: the upstream RHVoice-test tool (src/test/test.cpp) built against RHVoiceCore.
+// Development and CI smoke-test tool only; not shipped with the app.
+#include "CoreHeaders.xcconfig"
+
+PRODUCT_NAME = rhvoice-cli
+CLANG_CXX_LANGUAGE_STANDARD = c++14
+CLANG_CXX_LIBRARY = libc++
+GCC_ENABLE_CPP_EXCEPTIONS = YES
+GCC_ENABLE_CPP_RTTI = YES
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) PACKAGE=\"RHVoice\" VERSION=\"$(RHVOICE_VERSION)\" ENABLE_SONIC=0 ENABLE_PKG=0
+HEADER_SEARCH_PATHS = $(inherited) $(RHVOICE_SRC)/third-party/tclap $(RHVOICE_SRC)/audio
+GCC_WARN_INHIBIT_ALL_WARNINGS = YES

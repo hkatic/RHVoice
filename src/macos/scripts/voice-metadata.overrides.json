@@ -1,0 +1,46 @@
+{
+  "_comment": "Hand-maintained license/creator information for voices whose packs carry no machine-readable license (mostly RHVoice Lab voices, see doc/en/License.md and doc/en/Binaries.md). Keys are package index ids. Entries here override what scripts/generate-voice-metadata.py derives from the voice repositories.",
+  "licenses": {
+    "rhvoice-lab": {
+      "spdx": "CC-BY-NC-ND-4.0",
+      "name": "CC BY-NC-ND 4.0 (RHVoice Lab)",
+      "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+    }
+  },
+  "voices": {
+    "aleksandr_hq": {"license": "rhvoice-lab", "creators": ["RHVoice Lab"], "homepage": "https://rhvoice.su/voices/"},
+    "yuriy": {"license": "rhvoice-lab", "creators": ["RHVoice Lab"], "homepage": "https://rhvoice.su/voices/"},
+    "vitaliy": {"license": "rhvoice-lab", "creators": ["RHVoice Lab"], "homepage": "https://rhvoice.su/voices/"},
+    "vitaliy_ng": {"license": "rhvoice-lab", "creators": ["RHVoice Lab"], "homepage": "https://rhvoice.su/voices/"},
+    "evgeniy_rus": {"license": "rhvoice-lab", "creators": ["RHVoice Lab"], "homepage": "https://rhvoice.su/voices/"},
+    "evgeniy_eng": {"license": "rhvoice-lab", "creators": ["RHVoice Lab"], "homepage": "https://rhvoice.su/voices/"},
+    "artemiy": {"license": "rhvoice-lab", "creators": ["RHVoice Lab"], "homepage": "https://rhvoice.su/voices/"},
+    "tatiana": {"license": "rhvoice-lab", "creators": ["RHVoice Lab"], "homepage": "https://rhvoice.su/voices/"},
+    "victoria": {"license": "rhvoice-lab", "creators": ["RHVoice Lab"], "homepage": "https://rhvoice.su/voices/"},
+    "mikhail": {"license": "rhvoice-lab", "creators": ["RHVoice Lab"], "homepage": "https://rhvoice.su/voices/"},
+    "arina": {"license": "rhvoice-lab", "creators": ["RHVoice Lab"], "homepage": "https://rhvoice.su/voices/"},
+    "pavel": {"license": "rhvoice-lab", "creators": ["RHVoice Lab"], "homepage": "https://rhvoice.su/voices/"},
+    "umka": {"license": "rhvoice-lab", "creators": ["RHVoice Lab"], "homepage": "https://rhvoice.su/voices/"},
+    "timofey": {"license": "rhvoice-lab", "creators": ["RHVoice Lab"], "homepage": "https://rhvoice.su/voices/"},
+    "lyubov": {"license": "rhvoice-lab", "creators": ["RHVoice Lab"], "homepage": "https://rhvoice.su/voices/"},
+    "volodymyr": {"license": "rhvoice-lab", "creators": ["RHVoice Lab"], "homepage": "https://rhvoice.su/voices/"},
+    "marianna": {"license": "rhvoice-lab", "creators": ["RHVoice Lab"], "homepage": "https://rhvoice.su/voices/"},
+    "talgat": {
+      "license": {"spdx": null, "name": "Free for non-commercial use (see doc/en/License.md)", "url": "https://github.com/RHVoice/RHVoice/blob/master/doc/en/License.md"},
+      "creators": ["Rustam Bektenov"]
+    },
+    "natia": {
+      "license": {"spdx": null, "name": "Personal use only (see doc/en/License.md)", "url": "https://github.com/RHVoice/RHVoice/blob/master/doc/en/License.md"},
+      "creators": ["Beqa Gozalishvili", "Olga Yakovleva", "Vladimer Urdulashvili"],
+      "copyright": "Copyright (c) 2013 - 2018 Beqa Gozalishvili, Olga Yakovleva, Vladimer Urdulashvili"
+    },
+    "leticia_f123": {
+      "license": {"spdx": "CC-BY-SA-4.0", "name": "CC BY-SA 4.0", "url": "https://creativecommons.org/licenses/by-sa/4.0/"},
+      "creators": ["Olga Yakovleva", "Fernando H. F. Botelho"],
+      "copyright": "Copyright (C) 2018 - 2020 Olga Yakovleva, Fernando H. F. Botelho"
+    },
+    "bdl": {"license": {"spdx": null, "name": "CMU ARCTIC license (free for any use)", "url": "http://festvox.org/cmu_arctic/"}, "creators": ["Carnegie Mellon University (CMU ARCTIC)"]},
+    "clb": {"license": {"spdx": null, "name": "CMU ARCTIC license (free for any use)", "url": "http://festvox.org/cmu_arctic/"}, "creators": ["Carnegie Mellon University (CMU ARCTIC)"]},
+    "slt": {"license": {"spdx": null, "name": "CMU ARCTIC license (free for any use)", "url": "http://festvox.org/cmu_arctic/"}, "creators": ["Carnegie Mellon University (CMU ARCTIC)"]}
+  }
+}

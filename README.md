@@ -50,10 +50,13 @@ RHVoice supports the following platforms:
 * Android (can be installed thru
   [F-Droid](https://f-droid.org/packages/com.github.olga_yakovleva.rhvoice.android/)
   or [Google Play](https://play.google.com/store/apps/details?id=com.github.olga_yakovleva.rhvoice.android)
+* macOS 13 and later (building instructions in
+  [Compiling on macOS](doc/en/Compiling-on-macOS.md))
 
 It is compatible with standard text-to-speech interfaces on these platforms:
 SAPI5 on Windows, [Speech Dispatcher](https://devel.freebsoft.org/speechd) on
-GNU/Linux and Android's text-to-speech APIs. It can also be used by the
+GNU/Linux, Android's text-to-speech APIs and Apple's speech synthesis
+framework on macOS (voices are available to VoiceOver). It can also be used by the
 [NVDA screen reader](https://www.nvaccess.org) directly (the driver is provided
 by RHVoice itself).
 

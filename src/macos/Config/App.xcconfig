@@ -1,0 +1,10 @@
+// RHVoice: the host application (voice manager).
+PRODUCT_NAME = RHVoice
+PRODUCT_MODULE_NAME = RHVoice
+PRODUCT_BUNDLE_IDENTIFIER = $(RHVOICE_BUNDLE_PREFIX).RHVoice
+SWIFT_OBJC_BRIDGING_HEADER = $(SRCROOT)/RHVoice/RHVoice-Bridging-Header.h
+HEADER_SEARCH_PATHS = $(inherited) $(SRCROOT)/RHVoiceCore/Bridge
+OTHER_LDFLAGS = $(inherited) -ObjC -lc++
+COMBINE_HIDPI_IMAGES = YES
+ENABLE_PREVIEWS = YES
+HEADER_SEARCH_PATHS = $(inherited) $(SRCROOT)/RHVoiceCore/Bridge $(SRCROOT)/ThirdParty/stb_vorbis
